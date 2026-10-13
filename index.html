@@ -43,9 +43,6 @@
   <style>
     body { font-family: 'Inter', sans-serif; background-color: #0b0f17; color: #e2e8f0; }
     .serif-text { font-family: 'Newsreader', serif; }
-    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: #111827; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col bg-[#0b0f17] text-slate-200 antialiased selection:bg-amber-500 selection:text-black">
@@ -130,7 +127,7 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="infinitevizual.png" onerror="this.onerror=null; this.src='infinitevizual.jpg';" alt="Logo" class="h-6 w-auto">
-        <span>© 2026 INFINITE VIZUAL. Diberdayakan oleh Muhammad Akiff Azraei bin Nasri (QT MBOT)[cite: 7, 9].</span>
+        <span>© 2026 INFINITE VIZUAL. Diberdayakan oleh Muhammad Akiff Azraei bin Nasri (QT MBOT).</span>
       </div>
       <div class="flex items-center gap-6 text-slate-400">
         <a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-amber-400 transition">Utama</a>
@@ -148,23 +145,20 @@
       currentRoute: 'home',
       selectedSubjectId: null,
       selectedChapterId: null,
-      searchQuery: '',
-      bookmarks: JSON.parse(localStorage.getItem('iv_bookmarks') || '[]'),
-      userNotes: JSON.parse(localStorage.getItem('iv_notes') || '{}'),
-      completedChapters: JSON.parse(localStorage.getItem('iv_completed') || '[]')
+      searchQuery: ''
     };
 
-    // DEVELOPER PORTFOLIO DATA (MUHAMMAD AKIFF AZRAEI BIN NASRI)[cite: 7]
+    // DEVELOPER PORTFOLIO DATA (MUHAMMAD AKIFF AZRAEI BIN NASRI)
     const DEVELOPER_DATA = {
-      name: "Muhammad Akiff Azraei bin Nasri",[cite: 7]
-      mbot_no: "QT25100169",[cite: 7]
-      title: "Qualified Technician - Art Design & Creative Multimedia Technology (AM)",[cite: 7]
-      current_role: "Pereka B5, Unit Komunikasi Korporat dan Inovasi",[cite: 7]
-      organization: "Pejabat Setiausaha Kerajaan Negeri Pulau Pinang (PSUKPP)",[cite: 7]
-      education: "Diploma Pengajian Video dan Filem (CGPA: 3.50)",[cite: 7, 10]
-      email: "akiff236@gmail.com",[cite: 7]
-      phone: "010-715 8629",[cite: 7]
-      photo: "PASSPORT_2.jpg",[cite: 14]
+      name: "Muhammad Akiff Azraei bin Nasri",
+      mbot_no: "QT25100169",
+      title: "Qualified Technician - Art Design & Creative Multimedia Technology (AM)",
+      current_role: "Pereka B5, Unit Komunikasi Korporat dan Inovasi",
+      organization: "Pejabat Setiausaha Kerajaan Negeri Pulau Pinang (PSUKPP)",
+      education: "Diploma Pengajian Video dan Filem (CGPA: 3.50)",
+      email: "akiff236@gmail.com",
+      phone: "010-715 8629",
+      photo: "PASSPORT_2.jpg",
       videos: [
         {
           id: "aEaWVqQenjU",
@@ -223,7 +217,6 @@
           break;
         case 'visual_lab':
           app.innerHTML = renderVisualLabPage();
-          initVisualLabInteractions();
           break;
         case 'developer_profile':
           app.innerHTML = renderDeveloperProfilePage();
@@ -234,14 +227,14 @@
         case 'subject':
           app.innerHTML = renderSubjectPage(state.selectedSubjectId);
           break;
-        case 'reader':
-          app.innerHTML = renderReaderPage(state.selectedSubjectId, state.selectedChapterId);
-          break;
         default:
           app.innerHTML = renderHomePage();
       }
       
-      lucide.createIcons();
+      // Safe Lucide icon creation
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
     }
 
     // HOME PAGE VIEW
@@ -272,7 +265,7 @@
                 </button>
                 <button onclick="navigateTo('developer_profile')" class="px-5 py-3 rounded-xl bg-slate-800/80 text-slate-200 border border-slate-700 font-semibold text-sm hover:bg-slate-800 transition flex items-center gap-2">
                   <i data-lucide="user-check" class="h-4 w-4 text-indigo-400"></i>
-                  <span>Profil Pembangun System</span>
+                  <span>Profil Pembangun Sistem</span>
                 </button>
               </div>
             </div>
@@ -289,7 +282,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               
-              <!-- PUSAT 1 -->
               <div onclick="navigateTo('subject', 'sub-1')" class="group p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 hover:shadow-xl transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase">Pusat 1</span>
@@ -303,7 +295,6 @@
                 </div>
               </div>
 
-              <!-- PUSAT 2 -->
               <div onclick="navigateTo('subject', 'sub-2')" class="group p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 hover:shadow-xl transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase">Pusat 2</span>
@@ -317,7 +308,6 @@
                 </div>
               </div>
 
-              <!-- PUSAT 3 -->
               <div onclick="navigateTo('subject', 'sub-3')" class="group p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-purple-500/50 hover:shadow-xl transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20 uppercase">Pusat 3</span>
@@ -331,7 +321,6 @@
                 </div>
               </div>
 
-              <!-- PUSAT 4 -->
               <div onclick="navigateTo('subject', 'sub-4')" class="group p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:shadow-xl transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase">Pusat 4</span>
@@ -345,7 +334,6 @@
                 </div>
               </div>
 
-              <!-- PUSAT 5 -->
               <div onclick="navigateTo('subject', 'sub-5')" class="group p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-pink-500/50 hover:shadow-xl transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-pink-500/10 text-pink-400 border border-pink-500/20 uppercase">Pusat 5</span>
@@ -359,7 +347,6 @@
                 </div>
               </div>
 
-              <!-- PUSAT 6 (MODUL KHAS) -->
               <div onclick="navigateTo('comm_hub')" class="group p-6 rounded-2xl bg-gradient-to-br from-amber-950/30 via-slate-900 to-slate-900 border border-amber-500/30 hover:border-amber-400 transition cursor-pointer space-y-4">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 uppercase">Pusat Khas Eksekutif</span>
@@ -379,26 +366,22 @@
       `;
     }
 
-    // DEVELOPER PROFILE VIEW (MUHAMMAD AKIFF AZRAEI BIN NASRI)[cite: 7]
+    // DEVELOPER PROFILE VIEW
     function renderDeveloperProfilePage() {
       const dev = DEVELOPER_DATA;
       return `
         <div class="space-y-10">
-          
-          <!-- PROFILE HEADER CARD -->
           <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 md:p-10 shadow-2xl">
             <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
               
-              <!-- FOTO PROFIL (PASSPORT_2.JPG) -->
               <div class="relative group shrink-0">
                 <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
                 <img src="${dev.photo}" 
                      onerror="this.onerror=null; this.src='PASSPORT.jpg';" 
-                     alt="${dev.name}"[cite: 7]
+                     alt="${dev.name}"
                      class="relative w-44 h-56 md:w-52 md:h-64 object-cover object-top rounded-xl border-2 border-slate-700 shadow-2xl">
               </div>
 
-              <!-- BUTIRAN RASMI PROFIL -->
               <div class="flex-1 space-y-4 text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
                   <i data-lucide="shield-check" class="h-3.5 w-3.5"></i>
@@ -406,35 +389,34 @@
                 </div>
 
                 <div>
-                  <h1 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight">${dev.name}</h1>[cite: 7]
-                  <p class="text-amber-400 font-medium text-sm md:text-base mt-1">${dev.title}</p>[cite: 7]
-                  <p class="text-xs text-slate-400 font-mono mt-0.5">No. Perakuan MBOT: ${dev.mbot_no}</p>[cite: 7]
+                  <h1 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight">${dev.name}</h1>
+                  <p class="text-amber-400 font-medium text-sm md:text-base mt-1">${dev.title}</p>
+                  <p class="text-xs text-slate-400 font-mono mt-0.5">No. Perakuan MBOT: ${dev.mbot_no}</p>
                 </div>
 
                 <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 space-y-2 text-xs text-slate-300">
                   <div class="flex items-center gap-2 justify-center md:justify-start">
                     <i data-lucide="briefcase" class="h-4 w-4 text-amber-400 shrink-0"></i>
-                    <span><strong>Peranan Semasa:</strong> ${dev.current_role}, ${dev.organization}</span>[cite: 7]
+                    <span><strong>Peranan Semasa:</strong> ${dev.current_role}, ${dev.organization}</span>
                   </div>
                   <div class="flex items-center gap-2 justify-center md:justify-start">
                     <i data-lucide="graduation-cap" class="h-4 w-4 text-purple-400 shrink-0"></i>
-                    <span><strong>Kelayakan:</strong> ${dev.education}</span>[cite: 7, 10]
+                    <span><strong>Kelayakan:</strong> ${dev.education}</span>
                   </div>
                   <div class="flex items-center gap-2 justify-center md:justify-start">
                     <i data-lucide="mail" class="h-4 w-4 text-blue-400 shrink-0"></i>
-                    <span><strong>Emel Rasmi:</strong> ${dev.email} | <strong>Telefon:</strong> ${dev.phone}</span>[cite: 7]
+                    <span><strong>Emel Rasmi:</strong> ${dev.email} | <strong>Telefon:</strong> ${dev.phone}</span>
                   </div>
                 </div>
 
                 <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-                  Bertanggungjawab sepenuhnya dalam mereka bentuk, membina architecture pangkalan data, dan menyediakan sukatan kurikulum ilmu bagi platform <strong>INFINITE VIZUAL</strong>. Berbekalkan pengalaman praktikal dalam penerbitan media kerajaan, penyuntingan video korporat, dan komunikasi inovasi[cite: 7].
+                  Bertanggungjawab sepenuhnya dalam mereka bentuk, membina architecture pangkalan data, dan menyediakan sukatan kurikulum ilmu bagi platform <strong>INFINITE VIZUAL</strong>. Berbekalkan pengalaman praktikal dalam penerbitan media kerajaan, penyuntingan video korporat, dan komunikasi inovasi.
                 </p>
               </div>
 
             </div>
           </div>
 
-          <!-- SECTION: GALERI KARYA PORTFOLIO VIDEO -->
           <div class="space-y-6">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-4">
               <div>
@@ -446,12 +428,10 @@
               </div>
             </div>
 
-            <!-- GRID VIDEO PORTFOLIO -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               ${dev.videos.map(vid => `
                 <div class="group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition shadow-xl flex flex-col">
                   
-                  <!-- YOUTUBE THUMBNAIL CONTAINER WITH PLAY BUTTON -->
                   <div class="relative aspect-video w-full bg-black cursor-pointer overflow-hidden" onclick="playVideoModal('${vid.id}', '${vid.title}')">
                     <img src="https://img.youtube.com/vi/${vid.id}/hqdefault.jpg" alt="${vid.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition flex items-center justify-center">
@@ -464,7 +444,6 @@
                     </span>
                   </div>
 
-                  <!-- VIDEO DETAILS -->
                   <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
                     <div class="space-y-2">
                       <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-300 border border-purple-500/20 uppercase">
@@ -504,7 +483,6 @@
             </p>
           </div>
 
-          <!-- 3 LAYERS CARDS -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
               <span class="text-xs font-bold text-amber-400">LAPISAN 1</span>
@@ -535,7 +513,6 @@
             <p class="text-slate-300 text-sm">Uji dan fahami fenomena persepsi visual, montaj filem, pencahayaan studio, dan skala syot secara langsung.</p>
           </div>
 
-          <!-- KULESHOV EXPERIMENT LAB -->
           <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-6">
             <h2 class="text-lg font-bold text-white flex items-center gap-2">
               <i data-lucide="film" class="h-5 w-5 text-amber-400"></i>
@@ -577,39 +554,23 @@
       `;
     }
 
-    function initVisualLabInteractions() {}
-
     function setKuleshov(emoji, label, perception) {
       document.getElementById('kuleshovTarget').innerText = emoji;
       document.getElementById('kuleshovTargetLabel').innerText = 'Syot 2: ' + label;
       document.getElementById('kuleshovResult').innerText = 'Audiens mentafsirkan wajah neutral tersebut menunjukkan emosi: ' + perception;
     }
 
-    // SUBJECT VIEW & CHAPTER VIEWS
+    // OTHER VIEWS
     function renderSubjectPage(subId) {
       return `
         <div class="space-y-6">
           <button onclick="navigateTo('home')" class="text-xs text-amber-400 hover:underline flex items-center gap-1">
-            <i data-lucide="arrow-left" class="h-4 w-4"></i> Kembali ke Utamal
+            <i data-lucide="arrow-left" class="h-4 w-4"></i> Kembali ke Utama
           </button>
           <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-3">
             <span class="px-2.5 py-1 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase">Modul Kurikulum</span>
             <h1 class="text-2xl md:text-3xl font-extrabold text-white">Subjek Pembelajaran</h1>
             <p class="text-slate-300 text-sm">Sila pilih bab nota untuk mula membaca modul akademik terperinci.</p>
-          </div>
-        </div>
-      `;
-    }
-
-    function renderReaderPage(subId, chapId) {
-      return `
-        <div class="space-y-6">
-          <button onclick="navigateTo('subject', '${subId}')" class="text-xs text-amber-400 hover:underline flex items-center gap-1">
-            <i data-lucide="arrow-left" class="h-4 w-4"></i> Kembali ke Senarai Bab
-          </button>
-          <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-4">
-            <h1 class="text-2xl font-bold text-white">Modul Pembelajaran Akademik</h1>
-            <p class="text-slate-300 text-sm leading-relaxed">Kandungan nota penuh dipaparkan dalam mod pembaca editorial.</p>
           </div>
         </div>
       `;
@@ -648,7 +609,7 @@
       }
     }
 
-    // SEARCH INPUT HANDLER
+    // SEARCH HANDLER
     function handleSearchInput(e) {
       if (e.key === 'Enter') {
         const query = e.target.value.trim();
@@ -658,8 +619,8 @@
       }
     }
 
-    // INITIALIZATION
-    document.addEventListener('DOMContentLoaded', () => {
+    // INITIALIZATION WHEN DOM IS READY
+    window.addEventListener('DOMContentLoaded', () => {
       renderApp();
     });
   </script>
