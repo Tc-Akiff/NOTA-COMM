@@ -340,48 +340,1105 @@
        ========================================================= */
     const CHAPTERS_DATABASE = {};
 
-    /* Modul Teras: PHO102 (Fotografi Digital) */
+    /* Modul Teras: ART101 (Fundamental of Art and Design) - Modul Lengkap Kompilasi Akademik */
+    CHAPTERS_DATABASE["sub-1"] = [
+      {
+        id: "art-1",
+        number: 1,
+        title: "Bab 1: Sejarah, Teori Kolektif & Kerangka Asas Seni Visual",
+        readTime: "18 minit",
+        content: `
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Penafian Hak Cipta & Sumber Akademik:</strong> Nota dalam portal ini merupakan himpunan kajian, tesis akademik, serta buku teks standard antarabangsa dan tempatan (Ocvirk et al., Paul Klee, Wassily Kandinsky, Johannes Itten, Dato' Syed Ahmad Jamal).
+          </div>
+
+          <h2>1.1 Kerangka Tripartit Seni Visual (The Tripartite Framework)</h2>
+          <p>Berdasarkan rujukan standard antarabangsa <em>Art Fundamentals: Theory and Practice</em> (Edisi ke-12, 2012) oleh Otto G. Ocvirk, Robert E. Stinson, Philip R. Wigg, Robert O. Bone, dan David L. Cayton, sebarang manifestasi seni visual terdiri daripada persilangan tiga komponen utama yang tidak boleh dipisahkan:</p>
+          
+          <ul>
+            <li><strong>1. Bentuk (Form):</strong> Pengurusan susunan fizikal dan organisasi elemen visual (garisan, warna, rupa, ruang, jalinan, nilai ton) yang distrukturkan menggunakan prinsip rekaan (imbangan, irama, kesatuan, penegasan). Bentuk adalah rupa fizikal karya yang boleh dianalisis secara objektif.</li>
+            <li><strong>2. Kandungan (Content):</strong> Intipati makna, mesej, tema psikologi, falsafah atau emosi yang ingin disampaikan oleh pengkarya kepada audiens. Jika bentuk ialah <em>bagaimana</em> sesuatu karya dipersembahkan, kandungan ialah <em>apakah</em> tujuan kewujudannya.</li>
+            <li><strong>3. Konteks (Context):</strong> Latar belakang sejarah, situasi sosio-budaya, ekonomi, pengaruh teknologi atau persekitaran politik tempat karya tersebut dicipta. Konteks menentukan bagaimana sesuatu karya difahami mengikut garis masa tamadun manusia.</li>
+          </ul>
+
+          <!-- VISUAL RAJAH VEN TRIPARTIT -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 1.1: Kerangka Tripartit Seni Visual Ocvirk et al.]</span>
+            <svg viewBox="0 0 500 320" class="w-full max-w-md h-auto">
+              <circle cx="210" cy="140" r="100" fill="#f97316" fill-opacity="0.25" stroke="#f97316" stroke-width="2.5" />
+              <circle cx="290" cy="140" r="100" fill="#a855f7" fill-opacity="0.25" stroke="#a855f7" stroke-width="2.5" />
+              <circle cx="250" cy="210" r="100" fill="#06b6d4" fill-opacity="0.25" stroke="#06b6d4" stroke-width="2.5" />
+              
+              <text x="160" y="110" fill="#ffedd5" font-size="14" font-weight="bold" font-family="sans-serif">FORM</text>
+              <text x="145" y="130" fill="#cbd5e1" font-size="10" font-family="sans-serif">(Bentuk Fizikal)</text>
+              
+              <text x="310" y="110" fill="#f3e8ff" font-size="14" font-weight="bold" font-family="sans-serif">CONTENT</text>
+              <text x="305" y="130" fill="#cbd5e1" font-size="10" font-family="sans-serif">(Mesej & Emosi)</text>
+              
+              <text x="215" y="275" fill="#cffafe" font-size="14" font-weight="bold" font-family="sans-serif">CONTEXT</text>
+              <text x="205" y="295" fill="#cbd5e1" font-size="10" font-family="sans-serif">(Sejarah & Budaya)</text>
+              
+              <rect x="215" y="155" width="70" height="24" rx="6" fill="#0f172a" stroke="#fb923c" stroke-width="1.5"/>
+              <text x="225" y="171" fill="#f8fafc" font-size="11" font-weight="bold" font-family="sans-serif">KARYA SENI</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-3 text-center max-w-lg">Rajah 1.1: Persilangan optimum ketiga-tiga entiti melahirkan karya seni yang berdaya tahan zaman, relevan secara budaya dan bernilai estetik tinggi.</p>
+          </div>
+
+          <h2>1.2 Model Pedagogi Bauhaus (1919–1933)</h2>
+          <p>Institusi Bauhaus di Jerman merintis kurikulum seni asas (<em>Vorkurs</em>) yang menyatukan sains, industri, dan ekspresi tampak. Dua karya teoritikal utama yang mendasari pedagogi ini ialah:</p>
+          <ul>
+            <li><strong>Paul Klee — <em>Pedagogical Sketchbook</em> (1925):</strong> Mengkonsepsikan garisan bukan sebagai sempadan statik, sebaliknya sebagai tenaga dinamik aktif. Petikan masyhurnya: <em>"A line is a dot that went for a walk"</em> (Garisan ialah titik yang keluar bersiar-siar). Klee mengkaji garisan berasaskan pergerakan organik, graviti, dan daya emosi kinetik.</li>
+            <li><strong>Wassily Kandinsky — <em>Point and Line to Plane</em> (1926):</strong> Menganalisis evolusi geometri asas daripada dimensi sifar ke dimensi dua:</br>
+            <strong>Titik (Point)</strong> [Dimensi Sifar, hening, tumpuan mutlak] &rarr; <strong>Garisan (Line)</strong> [Ditolak oleh daya kinetik luaran] &rarr; <strong>Satah Asas (Basic Plane)</strong> [Permukaan material 2D yang menampung keseluruhan kandungan karya].</li>
+          </ul>
+
+          <!-- VISUAL PERKEMBANGAN KANDINSKY & KLEE -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 1.2: Progresi Pedagogi Titik ke Satah (Kandinsky & Klee)]</span>
+            <svg viewBox="0 0 600 160" class="w-full max-w-xl h-auto">
+              <!-- Titik -->
+              <circle cx="70" cy="80" r="10" fill="#f97316"/>
+              <text x="45" y="125" fill="#f1f5f9" font-size="12" font-weight="bold">1. TITIK (Point)</text>
+              <text x="35" y="142" fill="#94a3b8" font-size="10">Entiti statik, hening</text>
+              
+              <!-- Arrow 1 -->
+              <path d="M120 80 L170 80" stroke="#fb923c" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4 4"/>
+              
+              <!-- Garisan Berlekuk Dinamik -->
+              <path d="M190 80 Q225 30 260 80 T330 80" fill="none" stroke="#a855f7" stroke-width="3"/>
+              <text x="215" y="125" fill="#f1f5f9" font-size="12" font-weight="bold">2. GARISAN (Line)</text>
+              <text x="195" y="142" fill="#94a3b8" font-size="10">Tenaga kinetik bergerak</text>
+
+              <!-- Arrow 2 -->
+              <path d="M350 80 L400 80" stroke="#a855f7" stroke-width="2" stroke-dasharray="4 4"/>
+
+              <!-- Satah (Plane) -->
+              <polygon points="430,40 550,55 520,115 410,100" fill="#06b6d4" fill-opacity="0.3" stroke="#06b6d4" stroke-width="2.5"/>
+              <text x="440" y="125" fill="#f1f5f9" font-size="12" font-weight="bold">3. SATAH (Plane)</text>
+              <text x="430" y="142" fill="#94a3b8" font-size="10">Ruang batas 2-Dimensi</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Rajah 1.2: Rantaian transformasi geometri asas Bauhaus: Titik memulakan fokus, garisan mencipta vektor arah, dan satah melahirkan dunia visual penuh.</p>
+          </div>
+        `
+      },
+      {
+        id: "art-2",
+        number: 2,
+        title: "Bab 2: Analisis Mendalam 6 Elemen Seni Visual (Elements of Art)",
+        readTime: "24 minit",
+        content: `
+          <h2>2.1 Titik (Point / Dot)</h2>
+          <p><strong>Rujukan Teori:</strong> Wassily Kandinsky (1926); Georges Seurat & Paul Signac (Teori Pointillism / Divisionism, 1886).</p>
+          <p>Titik ialah unit asas terkecil dalam mana-mana medium seni visual. Titik tidak mempunyai panjang atau lebar fizikal melainkan koordinat tumpuan. Apabila titik disusun secara berkepadatan tinggi (<em>stippling density</em>), ia berupaya menjana ilusi nilai tona (<em>value gradient</em>), kontur bentuk, dan jalinan permukaan tanpa memerlukan sapuan garisan padat.</p>
+
+          <!-- VISUAL STIPPLING DENSITY -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-2 uppercase">[RAJAH 2.1: Kepadatan Titik Menentukan Ton (Stippling Value)]</span>
+            <div class="grid grid-cols-2 gap-6 w-full max-w-md">
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg width="120" height="100" viewBox="0 0 120 100">
+                  <circle cx="20" cy="25" r="3" fill="#f8fafc"/><circle cx="50" cy="30" r="3" fill="#f8fafc"/><circle cx="85" cy="20" r="3" fill="#f8fafc"/>
+                  <circle cx="35" cy="65" r="3" fill="#f8fafc"/><circle cx="95" cy="70" r="3" fill="#f8fafc"/><circle cx="65" cy="80" r="3" fill="#f8fafc"/>
+                </svg>
+                <span class="text-xs font-bold text-emerald-400 mt-2">Kepadatan Rendah</span>
+                <span class="text-[10px] text-slate-400">Menghasilkan Ton Cerah (High Key)</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg width="120" height="100" viewBox="0 0 120 100">
+                  <circle cx="15" cy="20" r="3.5" fill="#f8fafc"/><circle cx="30" cy="18" r="3.5" fill="#f8fafc"/><circle cx="45" cy="22" r="3.5" fill="#f8fafc"/><circle cx="60" cy="19" r="3.5" fill="#f8fafc"/><circle cx="75" cy="24" r="3.5" fill="#f8fafc"/><circle cx="90" cy="18" r="3.5" fill="#f8fafc"/><circle cx="105" cy="22" r="3.5" fill="#f8fafc"/>
+                  <circle cx="20" cy="40" r="3.5" fill="#f8fafc"/><circle cx="35" cy="42" r="3.5" fill="#f8fafc"/><circle cx="50" cy="38" r="3.5" fill="#f8fafc"/><circle cx="65" cy="43" r="3.5" fill="#f8fafc"/><circle cx="80" cy="39" r="3.5" fill="#f8fafc"/><circle cx="95" cy="41" r="3.5" fill="#f8fafc"/>
+                  <circle cx="18" cy="60" r="3.5" fill="#f8fafc"/><circle cx="32" cy="63" r="3.5" fill="#f8fafc"/><circle cx="48" cy="59" r="3.5" fill="#f8fafc"/><circle cx="63" cy="62" r="3.5" fill="#f8fafc"/><circle cx="78" cy="58" r="3.5" fill="#f8fafc"/><circle cx="93" cy="64" r="3.5" fill="#f8fafc"/>
+                  <circle cx="25" cy="80" r="3.5" fill="#f8fafc"/><circle cx="40" cy="82" r="3.5" fill="#f8fafc"/><circle cx="55" cy="78" r="3.5" fill="#f8fafc"/><circle cx="70" cy="83" r="3.5" fill="#f8fafc"/><circle cx="85" cy="80" r="3.5" fill="#f8fafc"/><circle cx="100" cy="81" r="3.5" fill="#f8fafc"/>
+                </svg>
+                <span class="text-xs font-bold text-rose-400 mt-2">Kepadatan Tinggi</span>
+                <span class="text-[10px] text-slate-400">Menghasilkan Ton Gelap (Low Key)</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>2.2 Garisan (Line)</h2>
+          <p><strong>Rujukan:</strong> <em>Design Basics</em> oleh Stephen Pentak & David A. Lauer.</p>
+          <p>Garisan merupakan jejak pergerakan titik dalam ruang. Dalam psikologi visual, arah garisan mempengaruhi tindak balas neurologi pemerhati:</p>
+          <ul>
+            <li><strong>Garisan Menegak (Vertical):</strong> Melambangkan keteguhan, autoriti, kemuliaan, dan kestabilan tegak menentang graviti.</li>
+            <li><strong>Garisan Melintang (Horizontal):</strong> Menimbulkan rasa rehat, hening, ketenangan mendatar, dan keluasan bumi/lautan.</li>
+            <li><strong>Garisan Berpenjuru (Diagonal):</strong> Mencetuskan ilusi ketegangan kinetik, pergerakan pantas, ketidakstabilan dramatik, dan aksi bertenaga.</li>
+            <li><strong>Garisan Tersirat (Implied Line):</strong> Garisan yang tidak wujud secara fizikal tetapi 'ditarik' oleh arah anak mata watak (<em>eyeline vector</em>) atau gerak isyarat jari.</li>
+          </ul>
+
+          <!-- VISUAL JENIS GARISAN & PSIKOLOGI -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 block text-center uppercase">[INFOGRAFIK 2.2: Psikologi dan Orientasi Garisan]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16"><line x1="50" y1="10" x2="50" y2="70" stroke="#38bdf8" stroke-width="4"/></svg>
+                <span class="font-bold text-xs text-sky-400 block mt-2">Menegak</span>
+                <span class="text-[10px] text-slate-400">Ketinggian, Disiplin, Maruah</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16"><line x1="10" y1="40" x2="90" y2="40" stroke="#4ade80" stroke-width="4"/></svg>
+                <span class="font-bold text-xs text-emerald-400 block mt-2">Melintang</span>
+                <span class="text-[10px] text-slate-400">Ketenangan, Rehat, Damai</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16"><line x1="15" y1="65" x2="85" y2="15" stroke="#f43f5e" stroke-width="4"/></svg>
+                <span class="font-bold text-xs text-rose-400 block mt-2">Berpenjuru</span>
+                <span class="text-[10px] text-slate-400">Dinamisme, Aksi, Konflik</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16">
+                  <circle cx="25" cy="40" r="8" fill="#fb923c"/><circle cx="28" cy="38" r="3" fill="#000"/>
+                  <line x1="40" y1="40" x2="85" y2="40" stroke="#fb923c" stroke-width="2.5" stroke-dasharray="4 4"/>
+                  <rect x="85" y="32" width="12" height="16" fill="#a855f7"/>
+                </svg>
+                <span class="font-bold text-xs text-amber-400 block mt-2">Tersirat (Implied)</span>
+                <span class="text-[10px] text-slate-400">Eyeline Match & Arah Pandang</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>2.3 Rupa (Shape) & Bentuk (Form)</h2>
+          <p><strong>Rujukan:</strong> <em>Form, Space, and Order</em> oleh Francis D. K. Ching.</p>
+          <ul>
+            <li><strong>Rupa (2D):</strong> Satah rata yang hanya mengandungi dua dimensi: <strong>Panjang & Lebar</strong>. Terbahagi kepada <em>Rupa Geometri</em> (matematik, simetri, bersegi) dan <em>Rupa Organik</em> (bebas, mengalir, menyerupai flora/fauna). Hubungan <em>Rupa Positif</em> (subjek) dan <em>Rupa Negatif</em> (ruang latar) menentukan kejelasan siluet.</li>
+            <li><strong>Bentuk (3D):</strong> Mempunyai tiga dimensi: <strong>Panjang, Lebar, dan Kedalaman (Isi padu / Volume)</strong>. Dalam seni visual, bentuk wujud sebagai <em>Bentuk Sebenar</em> (arca, seramik 3-dimensi) atau <em>Bentuk Ilusi</em> (objek yang dilukis di atas kertas 2D menggunakan teknik chiaroscuro/shading).</li>
+          </ul>
+
+          <!-- VISUAL RUPA 2D VS BENTUK 3D -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase">[RAJAH 2.3: Perbandingan Rupa Rata 2D vs Bentuk Berisi Padu 3D]</span>
+            <svg viewBox="0 0 460 160" class="w-full max-w-md h-auto">
+              <!-- Rupa 2D -->
+              <rect x="40" y="35" width="80" height="80" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+              <text x="45" y="140" fill="#f8fafc" font-size="12" font-weight="bold">Rupa Segi Empat (2D)</text>
+              <text x="50" y="155" fill="#94a3b8" font-size="10">Panjang x Lebar Sahaja</text>
+              
+              <!-- Separator -->
+              <line x1="210" y1="20" x2="210" y2="150" stroke="#334155" stroke-dasharray="3 3"/>
+
+              <!-- Bentuk 3D (Kubus Berbayang) -->
+              <polygon points="280,60 330,30 390,40 340,70" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/>
+              <polygon points="280,60 340,70 340,130 280,120" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+              <polygon points="340,70 390,40 390,100 340,130" fill="#1e40af" stroke="#1d4ed8" stroke-width="1.5"/>
+              <text x="275" y="140" fill="#f8fafc" font-size="12" font-weight="bold">Bentuk Kubus (3D Ilusi)</text>
+              <text x="270" y="155" fill="#94a3b8" font-size="10">Panjang x Lebar x Kedalaman</text>
+            </svg>
+          </div>
+
+          <h2>2.4 Ruang (Space) & Sistem Perspektif</h2>
+          <p><strong>Rujukan Utama:</strong> Risalah <em>De Pictura</em> (1435) oleh Leon Battista Alberti (Pelopor Perspektif Linear Renaissance).</p>
+          <ol>
+            <li><strong>Perspektif 1-Titik Lenyap (One-Point Perspective):</strong> Semua garisan ortogonal bertemu pada satu titik lenyap (<em>vanishing point</em>) tunggal di garisan ufuk (<em>horizon line</em>). Sesuai untuk lorong jalan, rel kereta api, dan koridor bilik.</li>
+            <li><strong>Perspektif 2-Titik Lenyap (Two-Point Perspective):</strong> Menggunakan dua titik lenyap di kiri dan kanan garisan ufuk, memperlihatkan bucu objek yang menghadap penonton (contoh: sudut luar blok bangunan).</li>
+            <li><strong>Perspektif Atmosfera (Atmospheric Perspective):</strong> Diperkenalkan oleh Leonardo da Vinci — objek yang berada semakin jauh dari kamera akan kehilangan kontras, perincian menjadi kabur, dan warna beralih ke spektrum sejuk kebiruan akibat penyerakan cahaya oleh zarah atmosfera.</li>
+          </ol>
+
+          <!-- VISUAL SISTEM PERSPEKTIF -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase">[RAJAH 2.4: Prinsip Perspektif Linear 1-Titik Lenyap (Alberti)]</span>
+            <svg viewBox="0 0 500 180" class="w-full max-w-lg h-auto">
+              <!-- Garisan Ufuk -->
+              <line x1="20" y1="90" x2="480" y2="90" stroke="#f43f5e" stroke-width="2"/>
+              <text x="25" y="82" fill="#fda4af" font-size="11" font-mono>Garisan Ufuk (Horizon Line)</text>
+              
+              <!-- Titik Lenyap -->
+              <circle cx="250" cy="90" r="5" fill="#fbbf24"/>
+              <text x="210" y="110" fill="#fde68a" font-size="11" font-bold>Titik Lenyap (VP)</text>
+
+              <!-- Garisan Ortogonal -->
+              <line x1="250" y1="90" x2="60" y2="170" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <line x1="250" y1="90" x2="440" y2="170" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <line x1="250" y1="90" x2="90" y2="20" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <line x1="250" y1="90" x2="410" y2="20" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 2"/>
+
+              <!-- Blok Bangunan Perspektif -->
+              <polygon points="90,40 160,65 160,135 90,160" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+              <polygon points="410,40 340,65 340,135 410,160" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <h2>2.5 Warna (Color), Nilai Ton & Teknik Chiaroscuro</h2>
+          <p><strong>Rujukan Utama:</strong> <em>The Art of Color</em> (1961) oleh Johannes Itten; <em>Interaction of Color</em> (1963) oleh Josef Albers; dan <em>Munsell Color System</em> (1905) oleh Albert H. Munsell.</p>
+          <p>Tiga dimensi saintifik warna:</p>
+          <ul>
+            <li><strong>Hue:</strong> Identiti keluarga warna spektrum tulen mengikut panjang gelombang cahaya (Merah, Kuning, Biru).</li>
+            <li><strong>Value:</strong> Darjah kecerahan atau kegelapan sesuatu warna. Penambahan putih menghasilkan <em>Tint</em>; penambahan hitam menghasilkan <em>Shade</em>; penambahan kelabu menghasilkan <em>Tone</em>.</li>
+            <li><strong>Chroma / Saturation:</strong> Darjah ketepuan dan kemurnian warna daripada kelabu kusam hingga warna spektrum tepu berseri.</li>
+          </ul>
+          <p><strong>Chiaroscuro:</strong> Berasal daripada bahasa Itali (<em>chiaro</em> = terang, <em>scuro</em> = gelap). Teknik penggredan ton terang-gelap yang ekstrem dan realistik yang dipelopori oleh Leonardo da Vinci, Caravaggio, dan Rembrandt untuk menghasilkan ilusi isi padu 3D dramatik.</p>
+
+          <h2>2.6 Jalinan (Texture)</h2>
+          <p><strong>Rujukan:</strong> <em>Principles of Two-Dimensional Design</em> oleh Wucius Wong.</p>
+          <ul>
+            <li><strong>Jalinan Sentuh (Tactile / Actual Texture):</strong> Permukaan fizikal nyata yang dapat dirasai dengan deria sentuhan kulit (contoh: teknik cat minyak tebal <em>impasto</em>, permukaan kasar kanvas linen, ukiran arca kayu).</li>
+            <li><strong>Jalinan Tampak (Visual / Implied Texture):</strong> Ilusi jalinan yang dilukis di atas permukaan licin 2-dimensi. Mata mentafsir tekstur bulu, kaca licin, atau batu kasar menerusi variasi ton mikro walaupun kertas fizikalnya licin rata.</li>
+          </ul>
+        `
+      },
+      {
+        id: "art-3",
+        number: 3,
+        title: "Bab 3: Prinsip Reka Bentuk (Principles of Design)",
+        readTime: "20 minit",
+        content: `
+          <h2>3.1 Prinsip Imbangan (Balance) & Berat Visual</h2>
+          <p><strong>Rujukan Utama:</strong> <em>Universal Principles of Design</em> oleh William Lidwell, Kritina Holden, dan Jill Butler.</p>
+          <p>Imbangan ialah pengagihan <strong>Berat Visual (Visual Weight)</strong> dalam sesuatu gubahan supaya tidak kelihatan condong atau berat sebelah. Tiga kategori imbangan:</p>
+          
+          <ul>
+            <li><strong>1. Imbangan Simetri (Symmetrical Balance):</strong> Pengagihan elemen yang serupa di kedua-dua belah paksi tengah cermin. Menghasilkan rasa kekudusan, keagungan formal, ketenangan statik, dan kestabilan klasik.</li>
+            <li><strong>2. Imbangan Asimetri (Asymmetrical Balance):</strong> Elemen di kiri dan kanan paksi adalah berbeza saiz, warna, atau rupa, namun mencapai keseimbangan daya graviti visual (contoh: satu objek gelap bersaiz kecil mengimbangi satu objek cerah bersaiz besar). Gubahan ini mencetuskan rasa dinamik dan moden.</li>
+            <li><strong>3. Imbangan Radial (Radial Balance):</strong> Elemen visual disusun memancar secara berputar dari satu titik pusat tengah ke arah luar (contoh: bunga teratai, roda basikal, corak tingkap kaca rotunda gereja).</li>
+          </ul>
+
+          <!-- VISUAL TIGA IMBANGAN -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 block text-center uppercase">[INFOGRAFIK 3.1: Tiga Struktur Imbangan Visual (Lidwell et al.)]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16">
+                  <circle cx="30" cy="40" r="15" fill="#38bdf8"/>
+                  <line x1="50" y1="10" x2="50" y2="70" stroke="#f43f5e" stroke-dasharray="2 2"/>
+                  <circle cx="70" cy="40" r="15" fill="#38bdf8"/>
+                </svg>
+                <span class="font-bold text-xs text-sky-400 block mt-1">Simetri</span>
+                <span class="text-[10px] text-slate-400">Formal & Statik</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16">
+                  <circle cx="25" cy="40" r="22" fill="#a855f7"/>
+                  <line x1="50" y1="10" x2="50" y2="70" stroke="#f43f5e" stroke-dasharray="2 2"/>
+                  <circle cx="78" cy="40" r="10" fill="#f59e0b"/>
+                </svg>
+                <span class="font-bold text-xs text-amber-400 block mt-1">Asimetri</span>
+                <span class="text-[10px] text-slate-400">Dinamik & Imbangan Berat</span>
+              </div>
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800">
+                <svg viewBox="0 0 100 80" class="w-full h-16">
+                  <circle cx="50" cy="40" r="6" fill="#f43f5e"/>
+                  <circle cx="50" cy="18" r="4" fill="#34d399"/><circle cx="50" cy="62" r="4" fill="#34d399"/>
+                  <circle cx="28" cy="40" r="4" fill="#34d399"/><circle cx="72" cy="40" r="4" fill="#34d399"/>
+                </svg>
+                <span class="font-bold text-xs text-emerald-400 block mt-1">Radial</span>
+                <span class="text-[10px] text-slate-400">Memancar dari Pusat</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>3.2 Penekanan (Emphasis), Kontras & Irama Visual</h2>
+          <ul>
+            <li><strong>Pusat Tumpuan (Focal Point / Dominance):</strong> Kawasan gubahan yang mula-mula menarik perhatian mata penonton. Dihasilkan menerusi:
+              <ul>
+                <li><em>Kontras Nilai/Warna:</em> Meletakkan objek warna panas di celah persekitaran warna sejuk.</li>
+                <li><em>Pengasingan (Isolation):</em> Menempatkan satu elemen bersendirian menjauhi kumpulan elemen lain.</li>
+                <li><em>Anomali:</em> Mengubah bentuk satu elemen di celah jujukan bentuk yang seragam.</li>
+              </ul>
+            </li>
+            <li><strong>Irama & Pergerakan (Rhythm & Movement):</strong> Aliran pergerakan mata melintasi kanvas yang dibimbing oleh pengulangan motif berkala, saiz berperingkat, atau lengkungan garisan dinamik.</li>
+            <li><strong>Kesatuan (Unity) & Kepelbagaian (Variety):</strong> <em>Unity</em> mengikat semua elemen supaya kelihatan harmoni sebagai satu entiti utuh, manakala <em>Variety</em> menghalang karya daripada menjadi bosan dan mendatar.</li>
+          </ul>
+
+          <!-- VISUAL PENUMPATAN FOCAL POINT -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-2 uppercase">[RAJAH 3.2: Penciptaan Focal Point Menerusi Anomali & Kontras Warna]</span>
+            <svg viewBox="0 0 360 80" class="w-full max-w-sm h-auto">
+              <rect x="20" y="25" width="30" height="30" fill="#475569" rx="4"/>
+              <rect x="80" y="25" width="30" height="30" fill="#475569" rx="4"/>
+              <rect x="140" y="25" width="30" height="30" fill="#475569" rx="4"/>
+              <!-- Focal Point Anomali Warna & Bentuk -->
+              <circle cx="215" cy="40" r="20" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <rect x="260" y="25" width="30" height="30" fill="#475569" rx="4"/>
+              <rect x="310" y="25" width="30" height="30" fill="#475569" rx="4"/>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Rajah 3.2: Mata manusia secara automatik tertarik kepada bulatan merah disebabkan kontras rupa (organik vs geometri) dan kontras kroma (warna panas vs neutral).</p>
+          </div>
+        `
+      },
+      {
+        id: "art-4",
+        number: 4,
+        title: "Bab 4: Psikologi Persepsi Visual (Gestalt Theory in Design)",
+        readTime: "22 minit",
+        content: `
+          <h2>Teori Gestalt & Pemprosesan Otak Manusia</h2>
+          <p><strong>Rujukan Teori:</strong> <em>Gestalt Theory of Form</em> (1912/1923) oleh Max Wertheimer, Kurt Koffka, dan Wolfgang Köhler dari Sekolah Psikologi Berlin.</p>
+          <p>Prinsip asas Gestalt menegaskan bahawa <em>"Keseluruhan adalah berbeza daripada jumlah bahagian-bahagiannya"</em> (The whole is other than the sum of its parts). Otak manusia mempunyai kecenderungan kognitif semulajadi untuk menstrukturkan rangsangan visual bersepah kepada corak yang tersusun dan bermakna.</p>
+
+          <!-- INFOGRAFIK 5 HUKUM GESTALT -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-4 block text-center uppercase">[INFOGRAFIK 4.1: 5 Hukum Persepsi Gestalt yang Mengawal Reka Bentuk]</span>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+              
+              <!-- 1. Closure -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 80 80" class="w-16 h-16">
+                  <path d="M 20 20 A 25 25 0 0 1 65 20" fill="none" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M 65 60 A 25 25 0 0 1 20 60" fill="none" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                <span class="font-bold text-xs text-amber-400 mt-2">1. Closure</span>
+                <span class="text-[10px] text-slate-400">Minda melengkapkan garis lengkung yang terputus menjadi bulatan penuh.</span>
+              </div>
+
+              <!-- 2. Proximity -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 80 80" class="w-16 h-16">
+                  <circle cx="18" cy="30" r="5" fill="#38bdf8"/><circle cx="28" cy="30" r="5" fill="#38bdf8"/><circle cx="18" cy="45" r="5" fill="#38bdf8"/><circle cx="28" cy="45" r="5" fill="#38bdf8"/>
+                  <circle cx="55" cy="30" r="5" fill="#38bdf8"/><circle cx="65" cy="30" r="5" fill="#38bdf8"/><circle cx="55" cy="45" r="5" fill="#38bdf8"/><circle cx="65" cy="45" r="5" fill="#38bdf8"/>
+                </svg>
+                <span class="font-bold text-xs text-sky-400 mt-2">2. Proximity</span>
+                <span class="text-[10px] text-slate-400">Objek berdekatan dikelompokkan sebagai 2 kolum berasingan.</span>
+              </div>
+
+              <!-- 3. Similarity -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 80 80" class="w-16 h-16">
+                  <circle cx="20" cy="25" r="6" fill="#a855f7"/><circle cx="40" cy="25" r="6" fill="#f8fafc"/><circle cx="60" cy="25" r="6" fill="#a855f7"/>
+                  <circle cx="20" cy="45" r="6" fill="#a855f7"/><circle cx="40" cy="45" r="6" fill="#f8fafc"/><circle cx="60" cy="45" r="6" fill="#a855f7"/>
+                  <circle cx="20" cy="65" r="6" fill="#a855f7"/><circle cx="40" cy="65" r="6" fill="#f8fafc"/><circle cx="60" cy="65" r="6" fill="#a855f7"/>
+                </svg>
+                <span class="font-bold text-xs text-purple-400 mt-2">3. Similarity</span>
+                <span class="text-[10px] text-slate-400">Objek warna serupa dikelompokkan mengikut garisan lajur.</span>
+              </div>
+
+              <!-- 4. Continuity -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 80 80" class="w-16 h-16">
+                  <path d="M 15 65 Q 40 15 65 65" fill="none" stroke="#22c55e" stroke-width="4"/>
+                  <line x1="15" y1="40" x2="65" y2="40" stroke="#f8fafc" stroke-width="3" stroke-dasharray="3 3"/>
+                </svg>
+                <span class="font-bold text-xs text-emerald-400 mt-2">4. Continuity</span>
+                <span class="text-[10px] text-slate-400">Mata mengikut aliran garis lengkung berbanding garisan putus.</span>
+              </div>
+
+              <!-- 5. Figure / Ground -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 80 80" class="w-16 h-16">
+                  <rect x="15" y="15" width="50" height="50" fill="#0f172a" stroke="#475569"/>
+                  <polygon points="40,20 60,60 20,60" fill="#f43f5e"/>
+                </svg>
+                <span class="font-bold text-xs text-rose-400 mt-2">5. Figure/Ground</span>
+                <span class="text-[10px] text-slate-400">Pemisahan subjek (segitiga merah) daripada satah latar gelap.</span>
+              </div>
+
+            </div>
+          </div>
+
+          <h3>Huraian Saintifik 5 Hukum Gestalt:</h3>
+          <ol>
+            <li><strong>Hukum Penutupan (Closure):</strong> Otak secara tidak sedar mengisi lompang visual yang kosong. Digunakan secara meluas dalam reka bentuk logo moden (contoh: logo panda WWF atau logo IBM).</li>
+            <li><strong>Hukum Kedudukan Dekat (Proximity):</strong> Jarak fizikal menentukan persaudaraan makna. Dalam UI/UX web, teks kapsyen diletakkan rapat dengan gambar supaya otak memahami ia saling menerangkan.</li>
+            <li><strong>Hukum Keserupaan (Similarity):</strong> Unsur yang berkongsi ciri visual (warna, bentuk, saiz) akan ditafsirkan sebagai mempunyai fungsi atau hierarki yang sama.</li>
+            <li><strong>Hukum Keterusan (Continuity):</strong> Penglihatan cenderung mengikuti garisan atau lengkung yang lancar dan berterusan daripada membuat belokan tajam atau berhenti di sudut bersilang.</li>
+            <li><strong>Hukum Rajah & Latar (Figure / Ground):</strong> Persepsi sentiasa membezakan objek utama yang menjadi fokus perhatian (<em>figure</em>) dengan persekitaran pasif di belakangnya (<em>ground</em>). Rubin's Vase adalah contoh klasik fenomena ini.</li>
+          </ol>
+        `
+      },
+      {
+        id: "art-5",
+        number: 5,
+        title: "Bab 5: Teori Gubahan & Komposisi Matematik",
+        readTime: "19 minit",
+        content: `
+          <h2>5.1 Nisbah Emas (The Golden Ratio / Phi $\\Phi$)</h2>
+          <p><strong>Rujukan Sejarah:</strong> <em>De Divina Proportione</em> (1509) oleh Luca Pacioli & Leonardo da Vinci; siri nombor Fibonacci oleh Leonardo of Pisa (1202).</p>
+          <p>Nisbah Emas merujuk kepada pemalar matematik <strong>$\\Phi = 1 : 1.618033...$</strong>. Apabila satu garisan dibahagikan kepada dua segmen $A$ dan $B$, nisbah keseluruhan garisan kepada segmen panjang adalah sama dengan nisbah segmen panjang kepada segmen pendek:</p>
+          
+          <div class="p-3 my-4 rounded-xl bg-cinematic-950 border border-cinematic-800 font-mono text-center text-amber-400 text-sm">
+            (A + B) / A = A / B = 1.618 (Phi)
+          </div>
+
+          <p>Corak ini menjelma dalam lingkaran cengkerang nautilus, susunan biji bunga matahari, pusaran galaksi, dan perkadaran tubuh manusia. Dalam seni dan reka bentuk grafik, <strong>Golden Spiral (Pusaran Fibonacci)</strong> digunakan untuk merancang aliran pergerakan mata ke arah titik kemuncak emosi sesebuah lukisan.</p>
+
+          <h2>5.2 Hukum Ketiga (The Rule of Thirds)</h2>
+          <p><strong>Rujukan:</strong> John Thomas Smith (1797) dalam risalah <em>Remarks on Rural Scenery</em>.</p>
+          <p><em>Rule of Thirds</em> ialah penyederhanaan praktikal kepada Nisbah Emas untuk kegunaan jurugambar dan pelukis lapangan. Ruang kanvas dibahagikan sama rata menggunakan 2 garisan menegak dan 2 garisan melintang untuk membentuk 9 petak segiempat:</p>
+          <ul>
+            <li>Empat titik persilangan garisan dikenali sebagai <strong>Titik Kuasa (Power Points / Crash Points)</strong>. Meletakkan mata watak atau horizon landskap di atas garisan ini mencipta komposisi yang lebih seimbang dan dinamik berbanding meletakkan subjek tepat di tengah-tengah kanvas (*bullseye framing*).</li>
+          </ul>
+
+          <!-- VISUAL RULE OF THIRDS GRID & GOLDEN SPIRAL -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase">[RAJAH 5.1: Grid 3x3 Rule of Thirds Bersama Titik Kuasa Persilangan]</span>
+            <svg viewBox="0 0 450 240" class="w-full max-w-md h-auto">
+              <!-- Satah Kanvas -->
+              <rect x="15" y="15" width="420" height="210" fill="#0f172a" stroke="#334155" stroke-width="2" rx="8"/>
+              
+              <!-- Garisan Grid Ketiga -->
+              <line x1="155" y1="15" x2="155" y2="225" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="295" y1="15" x2="295" y2="225" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="15" y1="85" x2="435" y2="85" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="15" y1="155" x2="435" y2="155" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+              <!-- 4 Titik Kuasa (Crash Points) -->
+              <circle cx="155" cy="85" r="7" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="295" cy="85" r="7" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="155" cy="155" r="7" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="295" cy="155" r="7" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              
+              <text x="170" y="80" fill="#fecaca" font-size="10" font-family="sans-serif">Power Point 1</text>
+              <text x="310" y="80" fill="#fecaca" font-size="10" font-family="sans-serif">Power Point 2</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Rajah 5.1: Memposisikan subjek tumpuan utama pada titik merah menghasilkan dinamisme visual 60% lebih kuat berbanding penengahan simetri.</p>
+          </div>
+        `
+      },
+      {
+        id: "art-6",
+        number: 6,
+        title: "Bab 6: Estetika, Falsafah & Rupa Jiwa Seni Visual Malaysia",
+        readTime: "20 minit",
+        content: `
+          <h2>6.1 Falsafah 'Rupa dan Jiwa' Seni Visual Melayu</h2>
+          <p><strong>Rujukan Akademik Tempatan:</strong></p>
+          <ul>
+            <li><em>Rupa dan Jiwa</em> (1992) oleh Seniman Negara Dato' Syed Ahmad Jamal.</li>
+            <li><em>Patah Tumbuh: Estetika Seni Visual Melayu</em> (2000) oleh Dr. Zakaria Ali.</li>
+          </ul>
+
+          <p>Dalam wacana seni visual Malaysia, Dato' Syed Ahmad Jamal menggariskan bahawa seni tempatan tidak boleh dinilai dari sudut formalisme Barat semata-mata. Seni peribumi berakar umbi daripada penyatuan dua dimensi batiniah:</p>
+          
+          <ul>
+            <li><strong>Rupa:</strong> Manifestasi bentuk zahir yang tampak — garisan ukiran, jalinan songket, kehalusan bilah keris, dan rupa bentuk senibina rumah limas.</li>
+            <li><strong>Jiwa:</strong> Intipati spiritualisme, ketauhidan, adab sopan, keharmonian dengan alam flora, dan ketundukan kepada Yang Maha Esa. 'Rupa' tanpa 'Jiwa' menghasilkan karya yang kaku dan hilang jati diri batiniah.</li>
+          </ul>
+
+          <h2>6.2 Penggayaan Motif & Kearifan Tempatan (Local Genius)</h2>
+          <p>Seni ukir dan seni kraf tradisional Melayu mengamalkan prinsip <strong>Stylization (Penggayaan Semula)</strong>. Berlandaskan pegangan Islam yang menghindari peniruan literal bernyawa (makhluk hidup secara fotorealistik), pandai ukir Melayu mempermudahkan motif alam menjadi stailisasi seni geometri dan arabesque organik:</p>
+
+          <ul>
+            <li><strong>Motif Awan Larat (Meandering Clouds):</strong> Menggambarkan kesinambungan hidup dan hubungan manusia yang tidak putus dengan Pencipta menerusi lengkungan sulur daun yang bersambung tanpa pangkal dan hujung yang ketara.</li>
+            <li><strong>Motif Pucuk Rebung:</strong> Melambangkan falsafah pendidikan moral dan adat <em>"melentur buluh biarlah dari rebungnya"</em> yang disusun dengan geometri segitiga simetri yang kukuh.</li>
+            <li><strong>Keseimbangan Kosmologi:</strong> Setiap ukiran kayu tebuk tembus sentiasa mengambil kira pengaliran udara dan cahaya (fungsi saintifik iklim tropika di samping estetik visual).</li>
+          </ul>
+
+          <!-- VISUAL MOTIF AWAN LARAT & PUCUK REBUNG -->
+          <div class="my-6 p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase">[ILUSTRASI 6.1: Prinsip Stailisasi Alam dalam Motif Tradisional Melayu]</span>
+            <svg viewBox="0 0 500 120" class="w-full max-w-lg h-auto">
+              <!-- Background Plaque Ukiran Kayu -->
+              <rect x="10" y="10" width="480" height="100" fill="#451a03" stroke="#b45309" stroke-width="2" rx="6"/>
+              
+              <!-- Pucuk Rebung (Geometri Simetri) -->
+              <polygon points="60,95 85,25 110,95" fill="#78350f" stroke="#f59e0b" stroke-width="2"/>
+              <polygon points="70,95 85,45 100,95" fill="#92400e" stroke="#fbbf24" stroke-width="1.5"/>
+              <text x="50" y="112" fill="#fde68a" font-size="9" font-family="sans-serif">Pucuk Rebung</text>
+
+              <!-- Awan Larat Berkeluk (Sulur Organik) -->
+              <path d="M 150 75 Q 190 20 230 70 T 310 65 T 390 70 T 460 45" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="230" cy="70" r="6" fill="#fde68a"/>
+              <circle cx="310" cy="65" r="6" fill="#fde68a"/>
+              <circle cx="390" cy="70" r="6" fill="#fde68a"/>
+              <text x="260" y="112" fill="#fde68a" font-size="9" font-family="sans-serif">Sulur Bayung & Awan Larat (Aliran Tak Terputus)</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Ilustrasi 6.1: Integrasi nilai Rupa dan Jiwa — motif alam diolah menerusi stailisasi geometri dan pengulangan harmoni.</p>
+          </div>
+        `
+      }
+    ];
+
+    /* Modul Teras: PHO102 (Fundamental of Digital Photography) - Sukatan Lengkap & Diagram ASCII */
     CHAPTERS_DATABASE["sub-2"] = [
       {
         id: "pho-1",
         number: 1,
-        title: "Sejarah Perkembangan Kamera Digital & Falsafah Visual",
-        readTime: "12 minit",
+        title: "Bab 1: Mekanik, Optik & Anatomi Sensor Kamera Digital",
+        readTime: "20 minit",
         content: `
-          <h2>1. Falsafah dan Asal-Usul Fotografi</h2>
-          <p>Perkataan <strong>fotografi</strong> berasal daripada perkataan bahasa Yunani: <em>phos</em> (cahaya) dan <em>graphê</em> (lukisan/tulisan). Secara harfiahnya, fotografi ialah proses melukis menggunakan cahaya. Prinsip saintifik ini bermula daripada penemuan fenomena <em>Camera Obscura</em> oleh Ibn al-Haytham (Alhazen) pada kurun ke-11 dan diperkembangkan sehingga terciptanya plat kekal oleh Nicéphore Niépce (1826) dan daguerreotype oleh Louis Daguerre (1839).</p>
-          <h3>Evolusi Seluloid ke Sensor Digital</h3>
-          <p>Revolusi digital bermula pada tahun 1969 apabila Willard Boyle dan George Smith mencipta cip <strong>CCD (Charge-Coupled Device)</strong> di Bell Labs. Kini, sensor <strong>CMOS BSI (Back-Illuminated)</strong> menjadi piawaian dalam kamera mirrorless moden kerana kecekapan tenaga dan keupayaan mengendalikan hingar digital (digital noise) pada nilai ISO tinggi.</p>
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Rujukan Akademik Teras:</strong> <em>Langford’s Basic Photography: The Guide for Serious Photographers</em> (Edisi ke-10, Focal Press) oleh Michael Langford, Anna Fox, & Richard Sawdon Smith; serta <em>Digital Photography: The Missing Manual</em> oleh Chris Grover.
+          </div>
+
+          <h2>1.1 Prinsip Optik & Laluan Cahaya (Optical Path)</h2>
+          <p>Kamera digital beroperasi berlandaskan hukum optik geometri klasik. Foton cahaya yang dipantulkan dari subjek bergerak merentasi atmosfera, memasuki elemen kaca kanta kamera (kumpulan elemen cembung dan cekung), dikawal oleh diafragma bukaan (<em>aperture</em>), melalui tirai pengatup mekanikal (<em>focal-plane shutter</em>), dan akhirnya ditukar kepada isyarat voltan elektrik oleh penderia digital CMOS (<em>Complementary Metal-Oxide-Semiconductor</em>).</p>
+
+          <!-- RAJAH VISUAL 1.1: KERATAN RENTAS LALUAN CAHAYA KAMERA -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 1.1: Keratan Rentas Laluan Sinar Foton Kamera Digital]</span>
+            <svg viewBox="0 0 650 240" class="w-full max-w-2xl h-auto drop-shadow-lg">
+              <defs>
+                <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+                  <stop offset="40%" stop-color="#f97316" stop-opacity="0.8"/>
+                  <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#a855f7" stop-opacity="0.9"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Badan Kamera Shell Luar -->
+              <rect x="250" y="30" width="370" height="180" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2.5"/>
+              <rect x="360" y="16" width="90" height="16" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+              <circle cx="580" cy="50" r="12" fill="#334155"/>
+
+              <!-- Tiub Lensa Kamera -->
+              <rect x="90" y="60" width="170" height="120" rx="6" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+              <rect x="50" y="70" width="42" height="100" rx="4" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+              <!-- Kaca Elemen Lensa (Cembung) -->
+              <path d="M 125 70 Q 140 120 125 170 Q 150 120 125 70 Z" fill="#38bdf8" fill-opacity="0.45" stroke="#38bdf8" stroke-width="2"/>
+              <path d="M 210 70 Q 195 120 210 170 Q 225 120 210 70 Z" fill="#38bdf8" fill-opacity="0.45" stroke="#38bdf8" stroke-width="2"/>
+
+              <!-- Diafragma Iris / Aperture -->
+              <line x1="170" y1="62" x2="170" y2="95" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
+              <line x1="170" y1="145" x2="170" y2="178" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
+              <text x="145" y="52" fill="#fda4af" font-size="10" font-weight="bold">Diafragma (Aperture)</text>
+
+              <!-- Sinar Cahaya (Light Ray Beams) -->
+              <polygon points="10,85 130,95 170,115 210,105 480,120 210,135 170,125 130,145 10,155" fill="url(#beamGrad)" fill-opacity="0.35"/>
+              <line x1="10" y1="120" x2="480" y2="120" stroke="#fef08a" stroke-width="2" stroke-dasharray="4 4"/>
+              
+              <!-- Shutter Tirai Mekanikal -->
+              <rect x="465" y="60" width="8" height="120" rx="2" fill="#e2e8f0" stroke="#94a3b8"/>
+              <text x="440" y="50" fill="#cbd5e1" font-size="10" font-weight="bold">Shutter Curtain</text>
+
+              <!-- Sensor Digital CMOS -->
+              <rect x="485" y="65" width="16" height="110" rx="3" fill="#10b981" stroke="#34d399" stroke-width="2"/>
+              <rect x="488" y="72" width="10" height="96" fill="#047857"/>
+              <text x="510" y="115" fill="#34d399" font-size="11" font-weight="bold">Sensor CMOS</text>
+              <text x="510" y="130" fill="#94a3b8" font-size="9">(Bayer Color Filter)</text>
+
+              <!-- Pemproses Imej / DSP -->
+              <rect x="560" y="95" width="46" height="50" rx="4" fill="#312e81" stroke="#818cf8" stroke-width="1.5"/>
+              <text x="570" y="123" fill="#e0e7ff" font-size="9" font-weight="bold">DSP / CPU</text>
+              <path d="M 501 120 L 560 120" stroke="#a7f3d0" stroke-width="2" marker-end="url(#arrow)"/>
+
+              <text x="15" y="70" fill="#fbbf24" font-size="11" font-weight="bold">Sinar Cahaya Subjek ➔</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-3 text-center max-w-xl">Rajah 1.1: Foton dibiaskan oleh optik lensa, dikawal kuantiti keluasannya oleh diafragma aperture, didedahkan mengikut masa pengatup shutter, dan ditukar menjadi data bit piksel oleh sensor CMOS.</p>
+          </div>
+
+          <h2>1.2 Jenis Penderia Digital & Faktor Potongan (Sensor Types & Crop Factor)</h2>
+          <p>Saiz fizikal penderia menentukan saiz fotodiod mikro (<em>pixel pitch</em>), julat dinamik (<em>dynamic range</em>), nisbah hingar (<em>signal-to-noise ratio</em>), dan sudut pandangan berkesan kanta. Penderia <strong>Full Frame (35mm)</strong> dijadikan kayu pengukur asas (Crop Factor = 1.0x berukuran $36\text{mm} \times 24\text{mm}$). Penderia yang lebih kecil mengalami pemotongan sudut pandangan tepi (<em>crop factor</em>), menyebabkan sudut kanta menjadi lebih sempit.</p>
+
+          <!-- RAJAH VISUAL 1.2: PERBANDINGAN SAIZ SENSOR -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 1.2: Perbandingan Skala Sebenar Saiz Sensor & Crop Factor]</span>
+            <svg viewBox="0 0 540 280" class="w-full max-w-xl h-auto">
+              <!-- Full Frame Outer Box (36 x 24 skala x12) -->
+              <rect x="50" y="20" width="432" height="240" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="3"/>
+              <text x="65" y="45" fill="#fbbf24" font-size="13" font-weight="bold">FULL FRAME (35mm Piawai)</text>
+              <text x="65" y="62" fill="#cbd5e1" font-size="11">Dimensi: 36.0mm x 24.0mm | Crop Factor: 1.0x (Standard Industri)</text>
+
+              <!-- APS-C / Super 35 (23.6 x 15.6 skala x12 = 283 x 187) -->
+              <rect x="50" y="20" width="283" height="187" rx="8" fill="#1e1b4b" fill-opacity="0.85" stroke="#818cf8" stroke-width="2.5"/>
+              <text x="65" y="105" fill="#c7d2fe" font-size="12" font-weight="bold">APS-C / Super 35 (Sony/Nikon/Fuji)</text>
+              <text x="65" y="120" fill="#a5b4fc" font-size="10">Dimensi: 23.6mm x 15.6mm | Crop Factor: 1.5x (Canon: 1.6x)</text>
+
+              <!-- Micro Four Thirds (17.3 x 13.0 skala x12 = 207 x 156) -->
+              <rect x="50" y="20" width="207" height="156" rx="6" fill="#064e3b" fill-opacity="0.85" stroke="#34d399" stroke-width="2.5"/>
+              <text x="65" y="152" fill="#6ee7b7" font-size="11" font-weight="bold">MICRO FOUR THIRDS (MFT)</text>
+              <text x="65" y="166" fill="#a7f3d0" font-size="9.5">Dimensi: 17.3mm x 13.0mm | Crop Factor: 2.0x</text>
+
+              <!-- 1-Inch Sensor (13.2 x 8.8 skala x12 = 158 x 105) -->
+              <rect x="50" y="20" width="158" height="105" rx="4" fill="#831843" fill-opacity="0.8" stroke="#f43f5e" stroke-width="2"/>
+              <text x="60" y="80" fill="#fecdd3" font-size="10" font-weight="bold">1-INCH (Dron/Kompak)</text>
+              <text x="60" y="92" fill="#fda4af" font-size="8.5">Crop Factor: 2.7x</text>
+            </svg>
+            <div class="mt-3 p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 text-xs text-slate-300 w-full max-w-xl text-center">
+              <strong>Formula Penukaran Jarak Fokus:</strong> Jarak Fokus Sebenar (mm) × Crop Factor = Jarak Fokus Setara 35mm.<br>
+              <em>Contoh:</em> Lensa 50mm pada sensor APS-C (1.5x) menghasilkan sudut pandang telefoto setara <strong>75mm</strong>!
+            </div>
+          </div>
+
+          <div class="my-4 overflow-x-auto">
+            <table class="w-full text-xs text-left border border-cinematic-800 rounded-xl overflow-hidden">
+              <thead class="bg-cinematic-900 text-amber-400 font-mono uppercase">
+                <tr>
+                  <th class="p-3 border-b border-cinematic-800">Format Sensor</th>
+                  <th class="p-3 border-b border-cinematic-800">Dimensi Fizikal</th>
+                  <th class="p-3 border-b border-cinematic-800">Crop Factor</th>
+                  <th class="p-3 border-b border-cinematic-800">Kesan Ke Atas Lensa 50mm</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-cinematic-800/60 font-sans text-slate-300">
+                <tr>
+                  <td class="p-3 font-semibold text-white">Full Frame (35mm)</td>
+                  <td class="p-3 font-mono">36.0mm x 24.0mm</td>
+                  <td class="p-3 font-mono">1.0x</td>
+                  <td class="p-3">Medan pandang normal piawai (50mm sebenar)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">APS-C (Nikon/Sony/Fuji)</td>
+                  <td class="p-3 font-mono">23.6mm x 15.6mm</td>
+                  <td class="p-3 font-mono">1.5x</td>
+                  <td class="p-3">Medan pandang telefoto pendek (75mm setara)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">APS-C (Canon)</td>
+                  <td class="p-3 font-mono">22.2mm x 14.8mm</td>
+                  <td class="p-3 font-mono">1.6x</td>
+                  <td class="p-3">Medan pandang telefoto pendek (80mm setara)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Micro Four Thirds (MFT)</td>
+                  <td class="p-3 font-mono">17.3mm x 13.0mm</td>
+                  <td class="p-3 font-mono">2.0x</td>
+                  <td class="p-3">Medan pandang telefoto penuh (100mm setara)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         `
       },
       {
         id: "pho-2",
         number: 2,
-        title: "Segitiga Pendedahan (Exposure Triangle): Aperture, Shutter Speed & ISO",
-        readTime: "16 minit",
+        title: "Bab 2: Segitiga Pendedahan (The Exposure Triangle) & Dinamik Fotometri",
+        readTime: "24 minit",
         content: `
-          <h2>1. Tiga Tonggak Pendedahan Cahaya</h2>
-          <p>Segitiga Pendedahan (Exposure Triangle) merupakan model asas kawalan pencahayaan kamera yang menggabungkan tiga pemboleh ubah saling berkait:</p>
-          <ul>
-            <li><strong>Aperture (Bukaan Diafragma / f-stop):</strong> Mengawal jumlah kuantiti cahaya yang menembusi kanta fizikal dan mengawal Kedalaman Medan (Depth of Field). Nilai f-stop kecil seperti f/1.4 menghasilkan bukaan besar (bokeh kabur belakang), manakala f/16 menghasilkan bukaan kecil (tajam dari depan ke belakang).</li>
-            <li><strong>Shutter Speed (Kelajuan Pengatup):</strong> Tempoh masa tirai sensor terdedah kepada cahaya. Kelajuan pantas (1/1000s) membekukan aksi laju, manakala kelajuan perlahan (1/4s) mencipta kesan kabur pergerakan (motion blur).</li>
-            <li><strong>ISO (Kepekaan Penguatan Sensor):</strong> Sensitiviti sensor terhadap cahaya. ISO 100 memberikan imej bersih tanpa hingar, manakala ISO 6400 membolehkan tangkapan dalam suasana gelap tetapi menambah hingar (noise/grain).</li>
-          </ul>
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Rujukan Utama:</strong> <em>Understanding Exposure: How to Shoot Great Photographs with Any Camera</em> (Edisi ke-4, Amphoto Books) oleh Bryan Peterson.
+          </div>
+
+          <h2>2.1 Teori Tiga Tiang Pendedahan (Exposure Equilibrium)</h2>
+          <p>Pendedahan fotometrik yang tepat ditakrifkan sebagai keseimbangan kuantum cahaya yang mencecah penderia bagi menghasilkan data tona visual yang setia dengan dunia nyata. Ketiga-tiga elemen—<strong>Aperture</strong>, <strong>Shutter Speed</strong>, dan <strong>ISO</strong>—saling bergantung mengikut hukum timbal balik fotometrik (<em>Reciprocity Law</em>):</p>
+
+          <!-- RAJAH VISUAL 2.1: SEGITIGA PENDEDAHAN (EXPOSURE TRIANGLE) -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 2.1: Model Segitiga Pendedahan Bryan Peterson]</span>
+            <svg viewBox="0 0 540 380" class="w-full max-w-lg h-auto drop-shadow-xl">
+              <!-- Segitiga Utama -->
+              <polygon points="270,40 50,340 490,340" fill="#0f172a" stroke="#f97316" stroke-width="3" stroke-linejoin="round"/>
+              
+              <!-- Garisan Dalam & Pusat Keseimbangan -->
+              <polygon points="270,120 140,310 400,310" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1.5"/>
+              <circle cx="270" cy="245" r="45" fill="#f97316" fill-opacity="0.15" stroke="#fb923c" stroke-width="2"/>
+              <text x="270" y="240" fill="#fde047" font-size="12" font-weight="extrabold" text-anchor="middle">EXPOSURE</text>
+              <text x="270" y="258" fill="#e2e8f0" font-size="10" font-weight="bold" text-anchor="middle">EQUILIBRIUM</text>
+
+              <!-- PUNCAK ATAS: APERTURE -->
+              <circle cx="270" cy="40" r="28" fill="#e11d48" stroke="#fecdd3" stroke-width="2.5"/>
+              <text x="270" y="44" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">f-stop</text>
+              <text x="270" y="-5" fill="#f43f5e" font-size="13" font-weight="extrabold" text-anchor="middle">APERTURE (Bukaan)</text>
+              <text x="270" y="10" fill="#cbd5e1" font-size="10" text-anchor="middle">Kedalaman Medan: Bokeh vs Tajam</text>
+
+              <!-- BUCU KIRI: SHUTTER SPEED -->
+              <circle cx="50" cy="340" r="28" fill="#0284c7" stroke="#bae6fd" stroke-width="2.5"/>
+              <text x="50" y="344" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">1/sec</text>
+              <text x="60" y="390" fill="#38bdf8" font-size="12" font-weight="extrabold" text-anchor="middle">SHUTTER SPEED</text>
+              <text x="60" y="405" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Masa: Beku vs Kabur Gerak</text>
+
+              <!-- BUCU KANAN: ISO SENSITIVITY -->
+              <circle cx="490" cy="340" r="28" fill="#7c3aed" stroke="#ddd6fe" stroke-width="2.5"/>
+              <text x="490" y="344" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">ISO</text>
+              <text x="480" y="390" fill="#a855f7" font-size="12" font-weight="extrabold" text-anchor="middle">ISO SENSITIVITY</text>
+              <text x="480" y="405" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Amplifikasi: Bersih vs Hingar</text>
+
+              <!-- Panah Hubungan Seimbang -->
+              <path d="M 220 80 L 110 280" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 3"/>
+              <path d="M 320 80 L 430 280" stroke="#a855f7" stroke-width="2" stroke-dasharray="4 3"/>
+              <path d="M 120 330 L 420 330" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
+            </svg>
+            <p class="text-xs text-slate-400 mt-8 text-center max-w-lg">Rajah 2.1: Mana-mana pelarasan pada satu tiang memerlukan pampasan pada tiang yang lain demi mengekalkan pendedahan cahaya yang optimum (0 EV).</p>
+          </div>
+
+          <h2>2.2 Bukaan Lensa (Aperture) & Kedalaman Medan (Depth of Field)</h2>
+          <p>Aperture dinilai menerusi nisbah pecahan f-stop: $f = \frac{\text{Jarak Fokus}}{\text{Diameter Bukaan}}$. Disebabkan ia merupakan pecahan, angka penyebut yang kecil (contoh: $f/1.4$) menandakan diameter fizikal bukaan yang luas, manakala angka besar (contoh: $f/16$) menandakan lubang bukaan halus kerdil.</p>
+
+          <!-- RAJAH VISUAL 2.2: SKALA BUKAAN APERTURE & BOKEH -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 2.2: Skala Diafragma f-stop & Kedalaman Medan (DOF)]</span>
+            <div class="grid grid-cols-2 sm:grid-cols-6 gap-3 w-full max-w-3xl text-center">
+              
+              <!-- f/1.4 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#f43f5e" stroke-width="2.5"/>
+                  <circle cx="35" cy="35" r="26" fill="#f43f5e" fill-opacity="0.3"/>
+                  <circle cx="35" cy="35" r="23" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-rose-400">f/1.4</span>
+                <span class="text-[10px] text-amber-300 font-bold mt-1">Cahaya Maksimum</span>
+                <span class="text-[9px] text-slate-400">DOF Sangat Cetek (Bokeh Krim)</span>
+              </div>
+
+              <!-- f/2.8 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#f43f5e" stroke-width="2.5"/>
+                  <circle cx="35" cy="35" r="18" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-rose-400">f/2.8</span>
+                <span class="text-[10px] text-amber-300 font-semibold mt-1">Bukaan Luas</span>
+                <span class="text-[9px] text-slate-400">Potret Isolasi Subjek</span>
+              </div>
+
+              <!-- f/5.6 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                  <circle cx="35" cy="35" r="12" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-sky-400">f/5.6</span>
+                <span class="text-[10px] text-slate-300 font-semibold mt-1">Sederhana</span>
+                <span class="text-[9px] text-slate-400">Fotografi Kumpulan & Jalanan</span>
+              </div>
+
+              <!-- f/8 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                  <circle cx="35" cy="35" r="8" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-sky-400">f/8.0</span>
+                <span class="text-[10px] text-emerald-400 font-bold mt-1">Sweet Spot</span>
+                <span class="text-[9px] text-slate-400">Ketajaman Puncak Lensa</span>
+              </div>
+
+              <!-- f/11 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+                  <circle cx="35" cy="35" r="5" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-emerald-400">f/11</span>
+                <span class="text-[10px] text-slate-300 font-semibold mt-1">Bukaan Kecil</span>
+                <span class="text-[9px] text-slate-400">Landskap & Senibina Tajam</span>
+              </div>
+
+              <!-- f/16 -->
+              <div class="p-3 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 70 70" class="w-14 h-14 my-1">
+                  <circle cx="35" cy="35" r="32" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+                  <circle cx="35" cy="35" r="2.5" fill="#ffffff"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-emerald-400">f/16</span>
+                <span class="text-[10px] text-slate-300 font-semibold mt-1">Cahaya Minima</span>
+                <span class="text-[9px] text-slate-400">Sunstar / Risiko Difraksi f/22</span>
+              </div>
+
+            </div>
+          </div>
+
+          <h2>2.3 Kelajuan Shutter (Shutter Speed) & Domain Masa</h2>
+          <p>Kelajuan shutter mengawal durasi pembukaan tirai pengatup. Tirai yang terbuka dalam mikrosaat membekukan masa kinetik, manakala tirai yang terdedah lama mengumpul jejak pergerakan cahaya:</p>
+
+          <!-- RAJAH VISUAL 2.3: KELAJUAN SHUTTER & PERGERAKAN -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 2.3: Spektrum Kelajuan Shutter Speed & Kesan Gerakan]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
+              
+              <!-- Freeze Motion -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-sky-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 100 70" class="w-20 h-16 my-1">
+                  <circle cx="50" cy="35" r="16" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+                  <!-- Percikan Titisan Air Beku -->
+                  <circle cx="28" cy="20" r="3" fill="#bae6fd"/><circle cx="72" cy="24" r="3.5" fill="#bae6fd"/><circle cx="35" cy="55" r="2.5" fill="#bae6fd"/><circle cx="68" cy="50" r="3" fill="#bae6fd"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-sky-400">1/2000s — 1/500s</span>
+                <span class="text-xs font-bold text-white mt-1">FREEZE MOTION</span>
+                <span class="text-[10px] text-slate-400 mt-1">Membekukan titisan air, sukan pantas, kepakan burung helang.</span>
+              </div>
+
+              <!-- Handheld Safe Zone -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-amber-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 100 70" class="w-20 h-16 my-1">
+                  <rect x="25" y="25" width="50" height="30" rx="4" fill="#334155" stroke="#f59e0b" stroke-width="2"/>
+                  <circle cx="50" cy="40" r="8" fill="#fbbf24"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-amber-400">1/250s — 1/60s</span>
+                <span class="text-xs font-bold text-white mt-1">ZON SELAMAT TANGAN</span>
+                <span class="text-[10px] text-slate-400 mt-1">Had pegangan tangan tanpa penstabil imej (Reciprocal Rule: 1/focal).</span>
+              </div>
+
+              <!-- Motion Blur / Long Exposure -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-rose-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 100 70" class="w-20 h-16 my-1">
+                  <!-- Jejak Garisan Kabur Air / Cahaya -->
+                  <path d="M 15 25 Q 50 15 85 25" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  <path d="M 10 38 Q 50 28 90 38" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  <path d="M 15 50 Q 50 40 85 50" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+                </svg>
+                <span class="font-mono font-bold text-sm text-rose-400">1/4s — 30s (Tripod)</span>
+                <span class="text-xs font-bold text-white mt-1">MOTION BLUR / PANNING</span>
+                <span class="text-[10px] text-slate-400 mt-1">Air terjun berkapas lembut, jejak lampu kereta waktu malam, star trails.</span>
+              </div>
+
+            </div>
+          </div>
+
+          <h2>2.4 Kepekaan Penderia (ISO) & Nisbah Isyarat Hingar (SNR)</h2>
+          <p>ISO digital bukan menambah cahaya fizikal, sebaliknya menggandakan keuntungan isyarat voltan (<em>analogue gain amplification</em>). Penguatan ini turut menguatkan gelombang hingar haba mikroskopik penderia:</p>
+
+          <!-- RAJAH VISUAL 2.4: ISO & SIMULASI HINGAR -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 2.4: Skala ISO & Kesan Digital Noise / Chrominance Grain]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl text-center">
+              
+              <!-- ISO 100 -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-emerald-500/40 flex flex-col items-center">
+                <div class="w-full h-20 rounded-lg bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center border border-slate-700">
+                  <span class="text-xs font-bold text-emerald-400">✓ Ultra Bersih</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-emerald-400 mt-2">ISO 100 (Base)</span>
+                <span class="text-[10px] text-slate-300">Julat Dinamik Penuh (14+ EV)</span>
+                <span class="text-[9px] text-slate-400">Studio & Siang Terang</span>
+              </div>
+
+              <!-- ISO 800-1600 -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-amber-500/40 flex flex-col items-center">
+                <div class="w-full h-20 rounded-lg bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center border border-slate-700 relative overflow-hidden">
+                  <!-- Sedikit Noise Corak Titik -->
+                  <div class="absolute inset-0 bg-white/5" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 8px 8px;"></div>
+                  <span class="text-xs font-bold text-amber-400 relative z-10">Hingar Ringan</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-amber-400 mt-2">ISO 800 — 1600</span>
+                <span class="text-[10px] text-slate-300">Julat Sederhana Boleh Diterima</span>
+                <span class="text-[9px] text-slate-400">Indoor & Acara Dewan</span>
+              </div>
+
+              <!-- ISO 6400+ -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-rose-500/40 flex flex-col items-center">
+                <div class="w-full h-20 rounded-lg bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center border border-slate-700 relative overflow-hidden">
+                  <!-- Noise Tebal Corak Berbintik Kasar -->
+                  <div class="absolute inset-0 bg-rose-500/10" style="background-image: radial-gradient(#f43f5e 1.5px, transparent 1px); background-size: 4px 4px;"></div>
+                  <span class="text-xs font-bold text-rose-400 relative z-10">⚠ Hingar Kasar</span>
+                </div>
+                <span class="font-mono font-bold text-sm text-rose-400 mt-2">ISO 6400 — 25600</span>
+                <span class="text-[10px] text-slate-300">Kehilangan Perincian & Warna</span>
+                <span class="text-[9px] text-slate-400">Kecemasan Malam Gelap</span>
+              </div>
+
+            </div>
+          </div>
         `
       },
       {
         id: "pho-3",
         number: 3,
-        title: "Optik Kanta Kamera: Focal Length, Prime vs Zoom & Aberasi Kromatik",
-        readTime: "15 minit",
+        title: "Bab 3: Suhu Warna Kelvin, Spektrum Cahaya & Imbangan Putih (White Balance)",
+        readTime: "18 minit",
         content: `
-          <h2>1. Karakteristik Kanta Kamera</h2>
-          <p>Kanta kamera menentukan perspektif ruang, pemampatan latar belakang, dan ketajaman optik gambar. Jarak fokus (focal length) dikira dalam milimeter (mm):</p>
-          <ul>
-            <li><strong>Kanta Sudut Lebar (Wide Angle, <35mm):</strong> Memperluas sudut pandangan, melebih-lebihkan jarak ruang dan perspektif (sesuai untuk landskap dan seni bina).</li>
-            <li><strong>Kanta Standard (50mm):</strong> Meniru sudut pandangan normal penglihatan mata manusia tanpa herotan perspektif.</li>
-            <li><strong>Kanta Telefoto (>70mm):</strong> Memampatkan latar belakang, mendekatkan subjek jauh dan memisahkan subjek daripada latar belakang (portrait & sukan).</li>
-          </ul>
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Rujukan Utama:</strong> <em>Langford’s Advanced Photography</em> (Edisi ke-8) oleh Efthimia Bilissi & Michael Langford; serta piawaian radiasi jasad hitam Planck (<em>Planckian Locus</em>).
+          </div>
+
+          <h2>3.1 Fizik Suhu Warna (Color Temperature in Kelvin)</h2>
+          <p>Suhu warna diukur mengikut unit saintifik <strong>Kelvin (K)</strong> berasaskan pancaran spektrum warna logam jasad hitam teoretikal yang dipanaskan. Suhu pembakaran rendah memancarkan spektrum panjang gelombang merah-jingga (panas), manakala suhu pembakaran tinggi menghasilkan spektrum pendek biru (sejuk).</p>
+
+          <!-- RAJAH VISUAL 3.1: BAR GRADIENT KELVIN -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 3.1: Skala Spektrum Suhu Warna Kelvin & Punca Cahaya Sebenar]</span>
+            <svg viewBox="0 0 600 220" class="w-full max-w-2xl h-auto">
+              <defs>
+                <linearGradient id="kelvinGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ea580c"/>
+                  <stop offset="25%" stop-color="#f59e0b"/>
+                  <stop offset="50%" stop-color="#fef08a"/>
+                  <stop offset="65%" stop-color="#f8fafc"/>
+                  <stop offset="85%" stop-color="#38bdf8"/>
+                  <stop offset="100%" stop-color="#1d4ed8"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Bar Warna Spektrum -->
+              <rect x="20" y="50" width="560" height="36" rx="18" fill="url(#kelvinGradient)" stroke="#ffffff" stroke-width="1.5"/>
+
+              <!-- Titik Tanda Suhu Kelvin & Label -->
+              <!-- 2000K -->
+              <circle cx="50" cy="68" r="6" fill="#000" stroke="#fff" stroke-width="2"/>
+              <text x="50" y="35" fill="#ea580c" font-size="11" font-bold text-anchor="middle">2,000K</text>
+              <text x="50" y="110" fill="#fed7aa" font-size="9" text-anchor="middle">Lilin / Bara Api</text>
+              <text x="50" y="125" fill="#94a3b8" font-size="8.5" text-anchor="middle">(Warm / Jingga)</text>
+
+              <!-- 3200K -->
+              <circle cx="150" cy="68" r="6" fill="#000" stroke="#fff" stroke-width="2"/>
+              <text x="150" y="35" fill="#f59e0b" font-size="11" font-bold text-anchor="middle">3,200K</text>
+              <text x="150" y="110" fill="#fde68a" font-size="9" text-anchor="middle">Tungsten / Halogen</text>
+              <text x="150" y="125" fill="#94a3b8" font-size="8.5" text-anchor="middle">(Lampu Pijar Rumah)</text>
+
+              <!-- 4000K -->
+              <circle cx="250" cy="68" r="6" fill="#000" stroke="#fff" stroke-width="2"/>
+              <text x="250" y="35" fill="#fef08a" font-size="11" font-bold text-anchor="middle">4,000K</text>
+              <text x="250" y="110" fill="#fef9c3" font-size="9" text-anchor="middle">Kalimantang Pejabat</text>
+              <text x="250" y="125" fill="#94a3b8" font-size="8.5" text-anchor="middle">(Fluorescent)</text>
+
+              <!-- 5600K -->
+              <circle cx="360" cy="68" r="8" fill="#f43f5e" stroke="#fff" stroke-width="2.5"/>
+              <text x="360" y="30" fill="#ffffff" font-size="12" font-extrabold text-anchor="middle">5,600K (Daylight)</text>
+              <text x="360" y="110" fill="#ffffff" font-size="9.5" font-bold text-anchor="middle">Matahari Tengah Hari</text>
+              <text x="360" y="125" fill="#cbd5e1" font-size="8.5" text-anchor="middle">(Neutral / Flash Studio)</text>
+
+              <!-- 7500K -->
+              <circle cx="470" cy="68" r="6" fill="#000" stroke="#fff" stroke-width="2"/>
+              <text x="470" y="35" fill="#38bdf8" font-size="11" font-bold text-anchor="middle">7,500K</text>
+              <text x="470" y="110" fill="#bae6fd" font-size="9" text-anchor="middle">Langit Mendung</text>
+              <text x="470" y="125" fill="#94a3b8" font-size="8.5" text-anchor="middle">(Overcast Sky)</text>
+
+              <!-- 10000K -->
+              <circle cx="550" cy="68" r="6" fill="#000" stroke="#fff" stroke-width="2"/>
+              <text x="550" y="35" fill="#60a5fa" font-size="11" font-bold text-anchor="middle">10,000K</text>
+              <text x="550" y="110" fill="#bfdbfe" font-size="9" text-anchor="middle">Bayang Redup</text>
+              <text x="550" y="125" fill="#94a3b8" font-size="8.5" text-anchor="middle">(Deep Shade / Cool)</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Fungsi <strong>White Balance</strong> adalah membalikkan warna dominan persekitaran agar warna putih subjek kembali neutral (R:255, G:255, B:255).</p>
+          </div>
+        `
+      },
+      {
+        id: "pho-4",
+        number: 4,
+        title: "Bab 4: Komposisi Fotografi Digital & Psikologi Visual",
+        readTime: "22 minit",
+        content: `
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Rujukan Utama:</strong> <em>The Photographer’s Eye: Composition and Design for Better Digital Photos</em> (2007) oleh Michael Freeman.
+          </div>
+
+          <h2>4.1 Prinsip Hukum Ketiga (The Rule of Thirds)</h2>
+          <p>Kanvas imej dibahagikan secara nisbah 1:1:1 melalui dua garisan menegak dan dua garisan melintang. Mata penonton tidak bermula secara pasif di tengah, sebaliknya secara biologi tertarik kepada empat titik persilangan koordinat (<em>Power Points</em>):</p>
+
+          <!-- RAJAH VISUAL 4.1: RULE OF THIRDS GRID & SUBJEK -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 4.1: Grid 3x3 Rule of Thirds & Pembingkaian Subjek Potret]</span>
+            <svg viewBox="0 0 520 280" class="w-full max-w-xl h-auto">
+              <!-- Kanvas Foto -->
+              <rect x="20" y="20" width="480" height="240" rx="10" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+
+              <!-- Garisan Grid 3x3 -->
+              <line x1="180" y1="20" x2="180" y2="260" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="340" y1="20" x2="340" y2="260" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="20" y1="100" x2="500" y2="100" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="20" y1="180" x2="500" y2="180" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+
+              <!-- 4 Titik Persilangan Kuasa (Crash / Power Points) -->
+              <circle cx="180" cy="100" r="9" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="340" cy="100" r="9" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="180" cy="180" r="9" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+              <circle cx="340" cy="180" r="9" fill="#ef4444" stroke="#fecaca" stroke-width="2"/>
+
+              <!-- Contoh Subjek Manusia pada Garisan Ketiga Kanan -->
+              <circle cx="340" cy="95" r="22" fill="#38bdf8" stroke="#bae6fd" stroke-width="2"/>
+              <path d="M 305 175 Q 340 130 375 175 Z" fill="#0284c7"/>
+              <text x="340" y="70" fill="#fde047" font-size="10" font-weight="bold" text-anchor="middle">Mata Subjek pada Crash Point</text>
+
+              <!-- Garisan Ufuk Landskap pada 1/3 Bawah -->
+              <line x1="20" y1="180" x2="500" y2="180" stroke="#22c55e" stroke-width="3"/>
+              <text x="80" y="172" fill="#86efac" font-size="10" font-weight="bold">Garisan Ufuk (1/3 Bawah)</text>
+            </svg>
+            <p class="text-xs text-slate-400 mt-2 text-center">Menempatkan mata subjek atau garis ufuk pada garisan pembahagi memberikan imbangan ruang nafas (<em>look room</em>) yang lebih dinamik.</p>
+          </div>
+
+          <h2>4.2 Garisan Penunjuk (Leading Lines) & Vektor Dinamik</h2>
+          <p>Garisan fizikal dalam persekitaran (jalan raya, rel kereta api, koridor, tebing sungai) berfungsi sebagai vektor penunjuk arah yang mengheret anak mata pemerhati dari pinggir bingkai terus ke subjek tumpuan utama:</p>
+
+          <!-- RAJAH VISUAL 4.2: LEADING LINES & FRAMING -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 4.2 & 4.3: Leading Lines & Framing within a Frame]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+              
+              <!-- 4.2 Leading Lines -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 220 160" class="w-full h-auto">
+                  <rect x="10" y="10" width="200" height="140" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Konvergensi Jalan Raya -->
+                  <polygon points="10,150 100,60 120,60 210,150" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                  <line x1="110" y1="60" x2="110" y2="150" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+                  <!-- Subjek di Hujung Jalan -->
+                  <circle cx="110" cy="52" r="8" fill="#f43f5e"/>
+                  <text x="110" y="38" fill="#fda4af" font-size="9" font-weight="bold" text-anchor="middle">Titik Tumpuan Subjek</text>
+                </svg>
+                <span class="font-bold text-xs text-sky-400 mt-2">Leading Lines (Vektor Garisan)</span>
+                <span class="text-[10px] text-slate-400">Mengheret fokus mata terus ke subjek di hujung perspektif.</span>
+              </div>
+
+              <!-- 4.3 Framing within Frame -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-cinematic-800 flex flex-col items-center">
+                <svg viewBox="0 0 220 160" class="w-full h-auto">
+                  <rect x="10" y="10" width="200" height="140" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Gerbang / Cermin / Dedaun Gelap Latar Hadapan -->
+                  <path d="M 10 10 L 210 10 L 210 150 L 10 150 Z M 50 130 L 170 130 L 170 45 Q 110 25 50 45 Z" fill="#020617" stroke="#64748b" stroke-width="1.5"/>
+                  <!-- Subjek Terbingkai di Dalam Gerbang -->
+                  <circle cx="110" cy="80" r="14" fill="#a855f7" stroke="#e9d5ff" stroke-width="1.5"/>
+                  <text x="110" y="112" fill="#c084fc" font-size="9" font-weight="bold" text-anchor="middle">Subjek Terbingkai</text>
+                </svg>
+                <span class="font-bold text-xs text-purple-400 mt-2">Framing within a Frame</span>
+                <span class="text-[10px] text-slate-400">Mencipta kedalaman visual 3D menggunakan elemen persekitaran.</span>
+              </div>
+
+            </div>
+          </div>
+        `
+      },
+      {
+        id: "pho-5",
+        number: 5,
+        title: "Bab 5: Graf Histogram, Julat Dinamik & Teori Ansel Adams Zone System",
+        readTime: "20 minit",
+        content: `
+          <div class="p-4 mb-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300">
+            <strong>Rujukan Utama:</strong> <em>The Digital Zone System: Taking Control from Inception to Final Print</em> oleh Robert Fisher; serta teori asal <em>Zone System</em> (1940) oleh Ansel Adams & Fred Archer.
+          </div>
+
+          <h2>5.1 Membaca Graf Histogram Kecerahan Digital</h2>
+          <p>Histogram ialah carta bar statistik masa nyata yang mewakili taburan jumlah piksel merentasi 256 tahap kecerahan (0 = Hitam Mutlak / Pure Black; 255 = Putih Terbakar / Pure White). Skrin LCD kamera boleh menipu penglihatan akibat silau cahaya matahari, tetapi graf histogram memberikan data fotometrik tanpa ralat.</p>
+
+          <!-- RAJAH VISUAL 5.1: 3 BENTUK HISTOGRAM -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 5.1: Tiga Profil Taburan Graf Histogram Kecerahan]</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
+              
+              <!-- 1. Underexposed -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-rose-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 160 90" class="w-full h-auto">
+                  <rect x="5" y="5" width="150" height="80" rx="4" fill="#0f172a" stroke="#334155"/>
+                  <!-- Lengkung Kurang Dedahan (Kiri) -->
+                  <path d="M 10 80 Q 20 15 45 40 Q 75 75 145 80 Z" fill="#f43f5e" fill-opacity="0.6" stroke="#f43f5e" stroke-width="2"/>
+                  <line x1="10" y1="15" x2="10" y2="80" stroke="#f43f5e" stroke-width="3"/>
+                </svg>
+                <span class="font-bold text-xs text-rose-400 mt-2">1. Terlalu Gelap (Underexposed)</span>
+                <span class="text-[10px] text-slate-400">Piksel bertimbun rapat di kiri (0). Risiko bayang hilang perincian (Shadow Clipping).</span>
+              </div>
+
+              <!-- 2. Balanced -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-emerald-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 160 90" class="w-full h-auto">
+                  <rect x="5" y="5" width="150" height="80" rx="4" fill="#0f172a" stroke="#334155"/>
+                  <!-- Lengkung Loceng Sempurna di Tengah -->
+                  <path d="M 20 80 Q 80 10 140 80 Z" fill="#10b981" fill-opacity="0.5" stroke="#10b981" stroke-width="2"/>
+                </svg>
+                <span class="font-bold text-xs text-emerald-400 mt-2">2. Pendedahan Seimbang (ETTR)</span>
+                <span class="text-[10px] text-slate-400">Lengkung loceng harmoni di tengah. Tiada data terpotong di dinding 0 atau 255.</span>
+              </div>
+
+              <!-- 3. Overexposed -->
+              <div class="p-4 rounded-xl bg-cinematic-900 border border-amber-500/40 flex flex-col items-center text-center">
+                <svg viewBox="0 0 160 90" class="w-full h-auto">
+                  <rect x="5" y="5" width="150" height="80" rx="4" fill="#0f172a" stroke="#334155"/>
+                  <!-- Lengkung Terlalu Cerah (Kanan) -->
+                  <path d="M 15 80 Q 90 75 115 40 Q 140 15 150 80 Z" fill="#fbbf24" fill-opacity="0.6" stroke="#fbbf24" stroke-width="2"/>
+                  <line x1="150" y1="15" x2="150" y2="80" stroke="#ef4444" stroke-width="3"/>
+                </svg>
+                <span class="font-bold text-xs text-amber-400 mt-2">3. Terlalu Cerah (Overexposed)</span>
+                <span class="text-[10px] text-slate-400">Piksel melanggar dinding kanan (255). Warna putih terbakar (Blown Highlights).</span>
+              </div>
+
+            </div>
+          </div>
+
+          <h2>5.2 Teori Sistem Zon Digital (Digital Zone System)</h2>
+          <p>Dipelopori oleh jurugambar legenda Ansel Adams dan diadaptasi ke era penderia digital oleh Robert Fisher. Julat kecerahan daripada hitam pekat ke putih silau dibahagikan kepada 11 zon nilai tona:</p>
+
+          <!-- RAJAH VISUAL 5.2: SKALA 11 ZON ANSEL ADAMS -->
+          <div class="my-8 p-6 rounded-2xl bg-cinematic-950 border border-cinematic-800 flex flex-col items-center">
+            <span class="text-[11px] font-mono font-bold text-amber-400 mb-3 uppercase tracking-wider">[RAJAH VISUAL 5.2: 11 Zon Skala Nilai Ton Ansel Adams]</span>
+            <div class="w-full max-w-2xl overflow-x-auto">
+              <div class="grid grid-cols-11 gap-1 text-center min-w-[500px]">
+                <div class="p-2 rounded bg-black border border-slate-700 text-white font-mono text-xs">0<br><span class="text-[8px] text-slate-400">Hitam</span></div>
+                <div class="p-2 rounded bg-[#18181b] border border-slate-700 text-white font-mono text-xs">I<br><span class="text-[8px] text-slate-400">Hampir</span></div>
+                <div class="p-2 rounded bg-[#27272a] border border-slate-700 text-white font-mono text-xs">II<br><span class="text-[8px] text-slate-400">Tekstur</span></div>
+                <div class="p-2 rounded bg-[#3f3f46] border border-slate-700 text-white font-mono text-xs">III<br><span class="text-[8px] text-slate-400">Bayang</span></div>
+                <div class="p-2 rounded bg-[#52525b] border border-slate-700 text-white font-mono text-xs">IV<br><span class="text-[8px] text-slate-400">Kulit D</span></div>
+                <div class="p-2 rounded bg-[#71717a] border-2 border-amber-400 text-amber-300 font-mono text-xs font-bold">V<br><span class="text-[8px]">18% Kelabu</span></div>
+                <div class="p-2 rounded bg-[#a1a1aa] text-black font-mono text-xs font-bold">VI<br><span class="text-[8px]">Kulit L</span></div>
+                <div class="p-2 rounded bg-[#d4d4d8] text-black font-mono text-xs">VII<br><span class="text-[8px]">Putih D</span></div>
+                <div class="p-2 rounded bg-[#e4e4e7] text-black font-mono text-xs">VIII<br><span class="text-[8px]">Kertas</span></div>
+                <div class="p-2 rounded bg-[#f4f4f5] text-black font-mono text-xs">IX<br><span class="text-[8px]">Kilau</span></div>
+                <div class="p-2 rounded bg-white text-black font-mono text-xs font-bold">X<br><span class="text-[8px]">Silau</span></div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-3 text-center">Zon V ialah penanda aras <strong>18% Neutral Gray</strong> yang digunakan oleh meter pendedahan kamera sebagai titik tengah standard pendedahan.</p>
+          </div>
         `
       }
     ];
@@ -794,27 +1851,6 @@
             <!-- Teks Kandungan Akademik Penuh -->
             <div class="font-serif prose-editorial text-slate-200 text-base leading-relaxed">
               ${chapter.content}
-            </div>
-
-            <!-- Kuiz Ulang Kaji Selepas Bab -->
-            <div class="mt-8 pt-8 border-t border-cinematic-800 space-y-4">
-              <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span>
-                <span>Soalan Refleksi & Ulang Kaji Bab</span>
-              </h3>
-              <p class="text-xs text-slate-400">Uji pemahaman anda sebelum beralih ke bab yang seterusnya:</p>
-              
-              <div class="p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 space-y-3 text-xs">
-                <p class="font-bold text-white">Soalan: Apakah impak utama sekiranya jurufoto memilih nilai aperture yang sangat luas (seperti f/1.4)?</p>
-                <div class="space-y-2">
-                  <button onclick="this.classList.add('bg-emerald-950','border-emerald-500','text-emerald-300')" class="w-full text-left p-3 rounded-xl bg-cinematic-900 hover:bg-cinematic-800 border border-cinematic-700 transition">
-                    A. Kedalaman medan menjadi cetek (bokeh latar belakang kabur) dan membenarkan lebih banyak cahaya masuk. (Jawapan Tepat)
-                  </button>
-                  <button onclick="this.classList.add('bg-rose-950','border-rose-500','text-rose-300')" class="w-full text-left p-3 rounded-xl bg-cinematic-900 hover:bg-cinematic-800 border border-cinematic-700 transition">
-                    B. Keseluruhan gambar dari depan ke belakang menjadi tajam dan gelap.
-                  </button>
-                </div>
-              </div>
             </div>
 
             <!-- Navigasi Bawah Bab -->
