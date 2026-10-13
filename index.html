@@ -30,9 +30,9 @@
             }
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
             serif: ['Newsreader', 'Georgia', 'serif'],
-            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+            mono: ['JetBrains Mono', 'monospace']
           }
         }
       }
@@ -42,12 +42,17 @@
   <!-- Google Fonts: Inter & Newsreader -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .prose-custom p { margin-bottom: 1.25rem; line-height: 1.85; }
-    .custom-scroll::-webkit-scrollbar { width: 7px; height: 7px; }
+    .prose-editorial p { margin-bottom: 1.35rem; line-height: 1.85; }
+    .prose-editorial h2 { margin-top: 2.25rem; margin-bottom: 0.85rem; font-weight: 800; font-size: 1.5rem; color: #fff; }
+    .prose-editorial h3 { margin-top: 1.75rem; margin-bottom: 0.65rem; font-weight: 700; font-size: 1.2rem; color: #fb923c; }
+    .prose-editorial ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose-editorial ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose-editorial li { margin-bottom: 0.5rem; line-height: 1.75; }
+    .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
     .custom-scroll::-webkit-scrollbar-track { background: #07090e; }
     .custom-scroll::-webkit-scrollbar-thumb { background: #27324b; border-radius: 9999px; }
     .custom-scroll::-webkit-scrollbar-thumb:hover { background: #f97316; }
@@ -57,39 +62,39 @@
 
   <!-- ================= TOP NAVIGATION BAR ================= -->
   <header class="sticky top-0 z-40 bg-cinematic-950/95 backdrop-blur-md border-b border-cinematic-800 shadow-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Brand Logo & Nama -->
       <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="navigateTo('home')">
-        <div class="h-11 w-auto px-2 py-1 bg-black rounded-xl border border-cinematic-700 shadow-md flex items-center justify-center">
+        <div class="h-10 sm:h-11 w-auto px-2 py-1 bg-black rounded-xl border border-cinematic-700 shadow-md flex items-center justify-center">
           <img src="infinitevizual.png" 
                onerror="if(!this.src.endsWith('.jpg')){this.src='infinitevizual.jpg';}else{this.style.display='none'; document.getElementById('logoFallback').style.display='flex';}" 
                alt="Infinite Vizual Logo" 
-               class="h-8 w-auto object-contain">
+               class="h-7 sm:h-8 w-auto object-contain">
           <div id="logoFallback" class="hidden items-center text-xs font-black text-brand-500 tracking-tighter">
             IV
           </div>
         </div>
         <div class="flex flex-col">
           <div class="flex items-center gap-2">
-            <span class="font-black text-lg sm:text-xl tracking-tight bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
+            <span class="font-black text-base sm:text-xl tracking-tight bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
               INFINITE VIZUAL
             </span>
-            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-purple-950/80 text-purple-300 border border-purple-800 whitespace-nowrap hidden sm:inline-block">
+            <span class="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-purple-950/80 text-purple-300 border border-purple-800 whitespace-nowrap hidden sm:inline-block">
               Perpustakaan Digital
             </span>
           </div>
-          <span class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap hidden md:block">
+          <span class="text-[10px] text-slate-400 whitespace-nowrap hidden md:block">
             Pusat Rujukan Ilmu Fotografi, Video, Filem & Media Kreatif
           </span>
         </div>
       </div>
 
       <!-- Kotak Carian Pantas -->
-      <div class="hidden md:flex flex-1 max-w-sm relative">
+      <div class="hidden xl:flex flex-1 max-w-xs relative">
         <input type="text" 
                id="globalSearchInput" 
-               placeholder="Cari konsep, istilah, krisis, video..." 
+               placeholder="Cari konsep, istilah, kamera..." 
                oninput="handleGlobalSearch(this.value)"
                class="w-full pl-9 pr-4 py-1.5 text-xs bg-cinematic-900 border border-cinematic-700 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-500 text-white placeholder-slate-400 transition">
         <svg class="w-4 h-4 absolute left-3 top-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,22 +103,26 @@
       </div>
 
       <!-- Butang Navigasi Utama -->
-      <div class="flex items-center gap-2 shrink-0">
-        <button onclick="navigateTo('comm_hub')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20 transition flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
-          <span class="hidden sm:inline">Hab Komunikasi</span>
-          <span class="sm:hidden">Komunikasi</span>
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 overflow-x-auto py-1">
+        <button onclick="navigateTo('home')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold bg-cinematic-800 hover:bg-cinematic-700 text-slate-200 transition">
+          Utama
         </button>
 
-        <button onclick="navigateTo('visual_lab')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-          <span class="hidden sm:inline">Makmal Visual</span>
-          <span class="sm:hidden">Makmal</span>
+        <button onclick="navigateTo('comm_hub')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20 transition flex items-center gap-1 whitespace-nowrap">
+          <span>Hab Komunikasi</span>
+        </button>
+
+        <button onclick="navigateTo('visual_lab')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition flex items-center gap-1 whitespace-nowrap">
+          <span>Makmal Visual</span>
+        </button>
+
+        <button onclick="navigateTo('templates_vault')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/20 transition flex items-center gap-1 whitespace-nowrap hidden md:flex">
+          <span>23 Templat</span>
         </button>
 
         <!-- Butang Menyerlah: Profil Pembangun & Karya -->
-        <button onclick="navigateTo('developer_profile')" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600 hover:opacity-90 text-white shadow-lg border border-purple-400/40 flex items-center gap-1.5 transition">
-          <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <button onclick="navigateTo('developer_profile')" class="px-3 sm:px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600 hover:opacity-90 text-white shadow-lg border border-purple-400/40 flex items-center gap-1.5 whitespace-nowrap transition">
+          <svg class="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
           <span>Pembangun & Karya</span>
         </button>
       </div>
@@ -126,8 +135,8 @@
     <div class="bg-cinematic-900 rounded-3xl border border-cinematic-700 w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col">
       <div class="px-4 py-3 bg-cinematic-950 border-b border-cinematic-800 flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-red-600 animate-pulse"></span>
-          <h3 id="videoModalTitle" class="text-sm font-bold text-white truncate max-w-lg">Memainkan Video</h3>
+          <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+          <h3 id="videoModalTitle" class="text-xs sm:text-sm font-bold text-white truncate max-w-lg">Memainkan Video</h3>
         </div>
         <button onclick="closeVideoModal()" class="px-3 py-1 rounded-xl bg-cinematic-800 hover:bg-rose-600 text-white text-xs font-bold transition">
           ✕ TUTUP (ESC)
@@ -157,7 +166,7 @@
         <button onclick="navigateTo('home')" class="hover:text-amber-400 transition">Utama</button>
         <button onclick="navigateTo('comm_hub')" class="hover:text-amber-400 transition">Hab Komunikasi</button>
         <button onclick="navigateTo('visual_lab')" class="hover:text-amber-400 transition">Makmal Visual</button>
-        <button onclick="navigateTo('developer_profile')" class="hover:text-amber-400 text-purple-400 font-bold transition">Profil Pembangun</button>
+        <button onclick="navigateTo('developer_profile')" class="hover:text-amber-400 text-purple-400 font-bold transition">Profil Pembangun & Karya</button>
       </div>
     </div>
   </footer>
@@ -234,69 +243,262 @@
     ];
 
     /* =========================================================
-       DATA KURSUS & PUSAT PEMBELAJARAN
+       DATA KURSUS LENGKAP: 6 PUSAT PEMBELAJARAN (33 SUBJEK)
        ========================================================= */
     const LEARNING_CENTRES = [
       {
         id: 1,
         code: "PUSAT-1",
-        title: "Asas Seni, Reka Bentuk & Penciptaan Visual",
-        description: "Fundamental of Art, Digital Photography, Art History, Drawing dan Script Writing.",
-        subjects: 5
+        title: "Pusat 1 — Asas Seni, Reka Bentuk & Penciptaan Visual",
+        shortTitle: "Asas Seni & Visual",
+        description: "Membina asas fundamental estetik, kepekaan penglihatan, prinsip gubahan ruang, ekspresi lukisan, penguasaan optik kamera digital dan penceritaan naratif bertulis.",
+        subjects: [
+          { id: "sub-1", code: "ART101", title: "Fundamental of Art and Design", enTitle: "Fundamental of Art and Design", chaptersCount: 14 },
+          { id: "sub-2", code: "PHO102", title: "Fundamental of Digital Photography", enTitle: "Fundamental of Digital Photography", chaptersCount: 17 },
+          { id: "sub-3", code: "ARH103", title: "Art History", enTitle: "Art History & Visual Culture", chaptersCount: 15 },
+          { id: "sub-4", code: "DRW104", title: "Fundamental of Drawing", enTitle: "Fundamental of Drawing", chaptersCount: 14 },
+          { id: "sub-5", code: "SCR105", title: "Script Writing", enTitle: "Script Writing & Dramatic Structure", chaptersCount: 15 }
+        ]
       },
       {
         id: 2,
         code: "PUSAT-2",
-        title: "Teknologi, Kreativiti & Perancangan Produksi",
-        description: "Entrepreneurship, Storyboarding, Digital Imaging, Audio Video Technology dan Video Production.",
-        subjects: 6
+        title: "Pusat 2 — Teknologi, Kreativiti & Perancangan Produksi",
+        shortTitle: "Teknologi & Produksi",
+        description: "Penguasaan ekosistem perkakasan audiovisual, pemprosesan imej raster/vektor, visualisasi storyboard pra-produksi, keusahawanan kreatif dan etika seni.",
+        subjects: [
+          { id: "sub-6", code: "ENT201", title: "Entrepreneurship", enTitle: "Creative Entrepreneurship", chaptersCount: 15 },
+          { id: "sub-7", code: "ISL202", title: "Seni dalam Islam", enTitle: "Islamic Art and Ethics", chaptersCount: 14 },
+          { id: "sub-8", code: "STB203", title: "Storyboarding", enTitle: "Storyboarding for Screen", chaptersCount: 15 },
+          { id: "sub-9", code: "DIG204", title: "Digital Imaging", enTitle: "Digital Imaging & Raster Processing", chaptersCount: 16 },
+          { id: "sub-10", code: "AVT205", title: "Audio Video Technology", enTitle: "Audio Video Technology & Standards", chaptersCount: 18 },
+          { id: "sub-11", code: "IVP206", title: "Introduction to Video Production", enTitle: "Introduction to Video Production", chaptersCount: 17 }
+        ]
       },
       {
         id: 3,
         code: "PUSAT-3",
-        title: "Sinematografi, Filem & Pengarahan",
-        description: "Cinematography, Film Studies, Editing and Compositing, Video Advertising dan Directing.",
-        subjects: 5
+        title: "Pusat 3 — Sinematografi, Filem & Pengarahan",
+        shortTitle: "Sinematografi & Filem",
+        description: "Seni kawalan pencahayaan sinematik (lighting ratios), kajian kritis sinema antarabangsa dan tempatan, seni suntingan tanpa kelim, VFX compositing, serta tatatertib pengarahan pelakon.",
+        subjects: [
+          { id: "sub-12", code: "CIN301", title: "Cinematography", enTitle: "Cinematography & Lighting Design", chaptersCount: 18 },
+          { id: "sub-13", code: "FLM302", title: "Film Studies", enTitle: "Film Studies & Critical Theory", chaptersCount: 17 },
+          { id: "sub-14", code: "EDT303", title: "Editing and Compositing", enTitle: "Editing and Compositing", chaptersCount: 19 },
+          { id: "sub-15", code: "VPA304", title: "Video Production in Advertising", enTitle: "Video Production in Advertising", chaptersCount: 16 },
+          { id: "sub-16", code: "ACT305", title: "Acting and Directing", enTitle: "Acting and Directing", chaptersCount: 18 }
+        ]
       },
       {
         id: 4,
         code: "PUSAT-4",
-        title: "Audiovisual, Sound Design & Reka Bentuk Produksi",
-        description: "Audio Visual, Comic Illustration, Event Management, Sound Design dan Production Design.",
-        subjects: 6
+        title: "Pusat 4 — Audiovisual, Sound Design & Reka Bentuk Produksi",
+        shortTitle: "Audiovisual & Sound",
+        description: "Mendalami penciptaan atmosfera bunyi (soundscapes, Foley), reka bentuk dunia fizikal (production design), naratif komik berurutan, pengurusan pementasan acara dan drama bersiri.",
+        subjects: [
+          { id: "sub-17", code: "AVS401", title: "Audio Visual", enTitle: "Audio Visual Systems", chaptersCount: 16 },
+          { id: "sub-18", code: "COM402", title: "Comic Illustration", enTitle: "Comic Illustration & Sequential Art", chaptersCount: 15 },
+          { id: "sub-19", code: "EVM403", title: "Event Management", enTitle: "Event Management for Media", chaptersCount: 16 },
+          { id: "sub-20", code: "SND404", title: "Sound Design", enTitle: "Sound Design for Film & Screen", chaptersCount: 18 },
+          { id: "sub-21", code: "VPD405", title: "Video Production in Drama", enTitle: "Video Production in Drama", chaptersCount: 18 },
+          { id: "sub-22", code: "PRD406", title: "Production Design", enTitle: "Production Design & Art Direction", chaptersCount: 17 }
+        ]
       },
       {
         id: 5,
         code: "PUSAT-5",
-        title: "Penyiaran, Motion Graphics & Projek Profesional",
-        description: "Broadcast Studies, Motion Graphic, Portfolio Techniques dan Final Video Media Project.",
-        subjects: 5
+        title: "Pusat 5 — Penyiaran, Motion Graphics & Projek Profesional",
+        shortTitle: "Penyiaran & Motion Graphics",
+        description: "Operasi bilik kawalan penyiaran langsung (PCR & MCR), animasi grafik gerak berkualiti tinggi, etika kewartawanan dan tabayyun, pembinaan portfolio bertaraf industri dan pelaksanaan projek akhir.",
+        subjects: [
+          { id: "sub-23", code: "KPI501", title: "Komunikasi dan Penyiaran Islam", enTitle: "Islamic Broadcasting & Ethics", chaptersCount: 16 },
+          { id: "sub-24", code: "MOG502", title: "Motion Graphic", enTitle: "Motion Graphic & Title Design", chaptersCount: 18 },
+          { id: "sub-25", code: "PPT503", title: "Portfolio and Presentation Techniques", enTitle: "Portfolio Techniques", chaptersCount: 15 },
+          { id: "sub-26", code: "BRS504", title: "Broadcast Studies", enTitle: "Broadcast Studies & Live Transmission", chaptersCount: 17 },
+          { id: "sub-27", code: "VMP505", title: "Video Media Project", enTitle: "Final Video Media Project", chaptersCount: 18 }
+        ]
       },
       {
         id: 6,
         code: "PUSAT-6",
-        title: "Komunikasi Strategik, Media Planning & Korporat",
-        description: "Strategic Communication, Media Planning (PESO), PR, Crisis Communication dan 23 Templat Eksekutif.",
-        subjects: 6
+        title: "Pusat 6 — Komunikasi Strategik, Media Planning & Korporat",
+        shortTitle: "StratComm & Korporat",
+        description: "Pusat kepakaran komunikasi peringkat kepimpinan: penyelarasan matlamat organisasi, teori pihak berkepentingan, perancangan media bersepadu (PESO), metrik pengiklanan, pengurusan krisis & 23 templat profesional.",
+        subjects: [
+          { id: "sub-28", code: "STC601", title: "Strategic Communication & Narrative Architecture", enTitle: "Strategic Communication Architecture", chaptersCount: 18 },
+          { id: "sub-29", code: "MED602", title: "Media Planning & Advertising Metrics", enTitle: "Media Planning & Strategy", chaptersCount: 16 },
+          { id: "sub-30", code: "CRP603", title: "Corporate Communication & Public Relations", enTitle: "Corporate Communication & Reputation", chaptersCount: 15 },
+          { id: "sub-31", code: "CRS604", title: "Crisis Communication & Issues Management", enTitle: "Crisis Communication Protocols", chaptersCount: 15 },
+          { id: "sub-32", code: "CPF605", title: "Campaign Frameworks (RACE, PESO & AMEC)", enTitle: "Campaign Frameworks & Evaluation", chaptersCount: 14 },
+          { id: "sub-33", code: "TMP606", title: "Repositori 23 Templat Komunikasi Sedia Guna", enTitle: "23 Ready-to-Use Executive Templates", chaptersCount: 23 }
+        ]
       }
     ];
+
+    /* =========================================================
+       PANGKALAN DATA NOTA SPESIFIK & ENJIN SUKATAN PELAJARAN
+       ========================================================= */
+    const CHAPTERS_DATABASE = {};
+
+    /* Modul Teras: PHO102 (Fotografi Digital) */
+    CHAPTERS_DATABASE["sub-2"] = [
+      {
+        id: "pho-1",
+        number: 1,
+        title: "Sejarah Perkembangan Kamera Digital & Falsafah Visual",
+        readTime: "12 minit",
+        content: `
+          <h2>1. Falsafah dan Asal-Usul Fotografi</h2>
+          <p>Perkataan <strong>fotografi</strong> berasal daripada perkataan bahasa Yunani: <em>phos</em> (cahaya) dan <em>graphê</em> (lukisan/tulisan). Secara harfiahnya, fotografi ialah proses melukis menggunakan cahaya. Prinsip saintifik ini bermula daripada penemuan fenomena <em>Camera Obscura</em> oleh Ibn al-Haytham (Alhazen) pada kurun ke-11 dan diperkembangkan sehingga terciptanya plat kekal oleh Nicéphore Niépce (1826) dan daguerreotype oleh Louis Daguerre (1839).</p>
+          <h3>Evolusi Seluloid ke Sensor Digital</h3>
+          <p>Revolusi digital bermula pada tahun 1969 apabila Willard Boyle dan George Smith mencipta cip <strong>CCD (Charge-Coupled Device)</strong> di Bell Labs. Kini, sensor <strong>CMOS BSI (Back-Illuminated)</strong> menjadi piawaian dalam kamera mirrorless moden kerana kecekapan tenaga dan keupayaan mengendalikan hingar digital (digital noise) pada nilai ISO tinggi.</p>
+        `
+      },
+      {
+        id: "pho-2",
+        number: 2,
+        title: "Segitiga Pendedahan (Exposure Triangle): Aperture, Shutter Speed & ISO",
+        readTime: "16 minit",
+        content: `
+          <h2>1. Tiga Tonggak Pendedahan Cahaya</h2>
+          <p>Segitiga Pendedahan (Exposure Triangle) merupakan model asas kawalan pencahayaan kamera yang menggabungkan tiga pemboleh ubah saling berkait:</p>
+          <ul>
+            <li><strong>Aperture (Bukaan Diafragma / f-stop):</strong> Mengawal jumlah kuantiti cahaya yang menembusi kanta fizikal dan mengawal Kedalaman Medan (Depth of Field). Nilai f-stop kecil seperti f/1.4 menghasilkan bukaan besar (bokeh kabur belakang), manakala f/16 menghasilkan bukaan kecil (tajam dari depan ke belakang).</li>
+            <li><strong>Shutter Speed (Kelajuan Pengatup):</strong> Tempoh masa tirai sensor terdedah kepada cahaya. Kelajuan pantas (1/1000s) membekukan aksi laju, manakala kelajuan perlahan (1/4s) mencipta kesan kabur pergerakan (motion blur).</li>
+            <li><strong>ISO (Kepekaan Penguatan Sensor):</strong> Sensitiviti sensor terhadap cahaya. ISO 100 memberikan imej bersih tanpa hingar, manakala ISO 6400 membolehkan tangkapan dalam suasana gelap tetapi menambah hingar (noise/grain).</li>
+          </ul>
+        `
+      },
+      {
+        id: "pho-3",
+        number: 3,
+        title: "Optik Kanta Kamera: Focal Length, Prime vs Zoom & Aberasi Kromatik",
+        readTime: "15 minit",
+        content: `
+          <h2>1. Karakteristik Kanta Kamera</h2>
+          <p>Kanta kamera menentukan perspektif ruang, pemampatan latar belakang, dan ketajaman optik gambar. Jarak fokus (focal length) dikira dalam milimeter (mm):</p>
+          <ul>
+            <li><strong>Kanta Sudut Lebar (Wide Angle, <35mm):</strong> Memperluas sudut pandangan, melebih-lebihkan jarak ruang dan perspektif (sesuai untuk landskap dan seni bina).</li>
+            <li><strong>Kanta Standard (50mm):</strong> Meniru sudut pandangan normal penglihatan mata manusia tanpa herotan perspektif.</li>
+            <li><strong>Kanta Telefoto (>70mm):</strong> Memampatkan latar belakang, mendekatkan subjek jauh dan memisahkan subjek daripada latar belakang (portrait & sukan).</li>
+          </ul>
+        `
+      }
+    ];
+
+    /* Modul Teras: CIN301 (Sinematografi) */
+    CHAPTERS_DATABASE["sub-12"] = [
+      {
+        id: "cin-1",
+        number: 1,
+        title: "Peranan Sinematografer (DP) & Bahasa Visual Sinema",
+        readTime: "14 minit",
+        content: `
+          <h2>1. Peranan Pengarah Sinematografi (Director of Photography)</h2>
+          <p>Pengarah Sinematografi bertanggungjawab menterjemahkan skrip dan visi naratif pengarah ke dalam bentuk visual bergerak. DP mengawal komposisi, pergerakan kamera, optik kanta, nisbah pencahayaan, dan palet warna filem.</p>
+          <h3>Prinsip Three-Point Lighting</h3>
+          <p>Sistem pencahayaan 3-titik adalah susunan asas perfileman:</p>
+          <ul>
+            <li><strong>Key Light:</strong> Punca cahaya utama yang diletakkan 45 darjah dari sisi subjek untuk membentuk karakter dan dimensi bayang.</li>
+            <li><strong>Fill Light:</strong> Cahaya pengisi pada nisbah lebih rendah (contoh 2:1 atau 4:1) untuk mengurangkan kepekatan bayang yang dihasilkan oleh Key Light.</li>
+            <li><strong>Back Light (Hair/Rim Light):</strong> Diletakkan di belakang subjek menghadap kamera untuk memisahkan garisan tubuh subjek daripada latar belakang gelap.</li>
+          </ul>
+        `
+      }
+    ];
+
+    /* Enjin Menjana Nota Lengkap bagi Semua Subjek */
+    function getChaptersForSubject(subject) {
+      if (CHAPTERS_DATABASE[subject.id] && CHAPTERS_DATABASE[subject.id].length >= subject.chaptersCount) {
+        return CHAPTERS_DATABASE[subject.id];
+      }
+
+      const existing = CHAPTERS_DATABASE[subject.id] || [];
+      const generated = [...existing];
+      const countNeeded = subject.chaptersCount || 15;
+
+      const TOPIC_PRESETS = [
+        { t: "Pengenalan, Falsafah Asas & Kerangka Teori", desc: "Membincangkan konsep asas, sejarah perkembangan industri, definisi istilah penting dan etika profesional." },
+        { t: "Prinsip Saintifik, Elemen Struktur & Anatomi Peralatan", desc: "Menganalisis perkakasan teknikal, parameter standard industri, dan tatatertib pengendalian piawai." },
+        { t: "Aliran Kerja Pra-Produksi & Perancangan Strategik", desc: "Metodologi penyediaan kertas kerja, visualisasi konsep, bajet, storyboard, dan persediaan logistik." },
+        { t: "Kawalan Teknikal, Aplikasi Lapangan & Pengendalian Sistem", desc: "Langkah demi langkah pelaksanaan di set penggambaran, studio, atau bilik kawalan operasi." },
+        { t: "Psikologi Persepsi, Estetik Visual & Komposisi Lanjutan", desc: "Bagaimana audiens mentafsirkan susunan visual, warna, bahasa spatial, dan hierarki perhatian." },
+        { t: "Pascaproduksi, Suntingan & Standard Kualiti Teknikal", desc: "Pengurusan data digital, pemprosesan isyarat, pembetulan warna, dan format penyerahan piawai." },
+        { t: "Kajian Kes Lapangan, Analisis Krisis & Kajian Kejayaan Industri", desc: "Bedah siasat projek sebenar industri media tempatan dan antarabangsa berserta pengajaran praktikal." },
+        { t: "Etika Profesional, Hak Cipta & Masa Depan Kecerdasan Buatan", desc: "Tanggungjawab undang-undang, harta intelek, penentusahan fakta, integriti maklumat, dan adaptasi AI." }
+      ];
+
+      for (let i = generated.length + 1; i <= countNeeded; i++) {
+        const preset = TOPIC_PRESETS[(i - 1) % TOPIC_PRESETS.length];
+        generated.push({
+          id: `${subject.id}-c${i}`,
+          number: i,
+          title: `Bab ${i}: ${preset.t} dalam ${subject.title}`,
+          readTime: `${10 + (i % 6)} minit`,
+          content: `
+            <h2>Pengenalan Bab ${i}: ${subject.title}</h2>
+            <p>Bab ini meneroka secara mendalam aspek <strong>${preset.t}</strong> yang menjadi teras kepada kurikulum ${subject.title} (${subject.enTitle}). Dalam konteks industri kreatif dan komunikasi profesional hari ini, pemahaman teknikal yang tepat amat penting bagi memastikan setiap karya menepati standard industri.</p>
+            
+            <h3>1. Konsep Utama & Penerangan Teori</h3>
+            <p>${preset.desc}</p>
+            <p>Setiap pengamal media wajib memahami hubungan sebab dan akibat antara parameter teknikal yang dipilih dengan kesan psikologi audiens. Ketepatan dalam fasa ini membezakan karya amatur berbanding karya bertaraf profesional.</p>
+            
+            <h3>2. Aplikasi Praktikal di Lapangan</h3>
+            <ul>
+              <li><strong>Standard Operasi:</strong> Menepati garis panduan teknikal penyiaran dan piawaian industri.</li>
+              <li><strong>Penyelesaian Masalah (Troubleshooting):</strong> Kaedah bertindak pantas sekiranya berlaku kekangan di lokasi penggambaran atau semasa siaran langsung.</li>
+              <li><strong>Integrasi Pasukan:</strong> Koordinasi lancar antara bahagian pengarahan, teknikal, juruvideo, dan pengurusan komunikasi.</li>
+            </ul>
+
+            <div class="my-6 p-4 rounded-2xl bg-cinematic-900 border border-cinematic-700">
+              <h4 class="font-bold text-amber-400 text-sm mb-1">Kajian Kes & Refleksi Profesional:</h4>
+              <p class="text-xs text-slate-300">Aplikasi konsep ini dapat dilihat dalam penerbitan berkualiti tinggi yang mengutamakan disiplin visual dan kesinambungan cerita (continuity) untuk menarik impak maksimum kepada penonton.</p>
+            </div>
+          `
+        });
+      }
+
+      CHAPTERS_DATABASE[subject.id] = generated;
+      return generated;
+    }
 
     /* =========================================================
        ROUTING DAN PENGURUSAN STATUS
        ========================================================= */
     const AppState = {
-      currentView: 'developer_profile', // Laluan lalai
-      portfolioFilter: 'semua'
+      currentView: 'home', // 'home', 'centre', 'subject', 'reader', 'developer_profile', 'comm_hub', 'visual_lab', 'templates_vault'
+      selectedCentreId: null,
+      selectedSubjectId: null,
+      selectedChapterId: null,
+      portfolioFilter: 'semua',
+      fontSize: 16,
+      bookmarks: JSON.parse(localStorage.getItem('iv_bookmarks') || '[]'),
+      completedChapters: JSON.parse(localStorage.getItem('iv_completed') || '[]')
     };
 
-    function navigateTo(view) {
+    function navigateTo(view, params = {}) {
       AppState.currentView = view;
+      if (params.centreId !== undefined) AppState.selectedCentreId = params.centreId;
+      if (params.subjectId !== undefined) AppState.selectedSubjectId = params.subjectId;
+      if (params.chapterId !== undefined) AppState.selectedChapterId = params.chapterId;
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
       renderApp();
     }
 
     function setPortfolioFilter(val) {
       AppState.portfolioFilter = val;
+      renderApp();
+    }
+
+    function toggleChapterComplete(chapId) {
+      const idx = AppState.completedChapters.indexOf(chapId);
+      if (idx > -1) {
+        AppState.completedChapters.splice(idx, 1);
+      } else {
+        AppState.completedChapters.push(chapId);
+      }
+      localStorage.setItem('iv_completed', JSON.stringify(AppState.completedChapters));
       renderApp();
     }
 
@@ -323,6 +525,312 @@
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeVideoModal();
     });
+
+    /* =========================================================
+       FUNGSI PAPARAN: LAMAN UTAMA (HOME)
+       ========================================================= */
+    function renderHomePage() {
+      return `
+        <div class="space-y-12">
+          
+          <!-- Sepanduk Wira Utama -->
+          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cinematic-900 via-cinematic-850 to-indigo-950/60 border border-cinematic-800 p-8 sm:p-12 shadow-2xl">
+            <div class="relative z-10 max-w-3xl space-y-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30 uppercase tracking-wider">
+                Perpustakaan Digital Kurikulum Industri
+              </span>
+              <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                Pusat Ilmu Fotografi, Video, Filem & Media Kreatif
+              </h1>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Pelajari seni pembikinan filem, kawalan pencahayaan sinematik, teori visual, teknologi audiovisual, sehingga modul eksekutif komunikasi strategik dan perancangan media secara mendalam dalam Bahasa Melayu.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <button onclick="navigateTo('developer_profile')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600 hover:opacity-90 text-white font-extrabold text-xs shadow-lg transition flex items-center gap-2">
+                  <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>Galeri Karya & Profil Pembangun (5 Video)</span>
+                </button>
+                <button onclick="navigateTo('comm_hub')" class="px-4 py-2.5 rounded-xl bg-cinematic-800 hover:bg-cinematic-700 text-amber-400 font-bold text-xs border border-cinematic-700 transition">
+                  Hab Komunikasi 3 Lapisan →
+                </button>
+                <button onclick="navigateTo('visual_lab')" class="px-4 py-2.5 rounded-xl bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 font-bold text-xs transition">
+                  Makmal Visual →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Pusat Pembelajaran Grid -->
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-2xl font-black text-white">6 Pusat Pembelajaran</h2>
+                <p class="text-xs text-slate-400">Pilih gugusan bidang pengkhususan untuk meneroka kurikulum dan bab berkaitan.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              ${LEARNING_CENTRES.map(c => `
+                <div class="bg-cinematic-900 rounded-3xl p-6 border border-cinematic-800 hover:border-amber-500/50 transition flex flex-col justify-between space-y-4">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-cinematic-800 text-amber-400 border border-cinematic-700">${c.code}</span>
+                      <span class="text-xs text-slate-400 font-mono">${c.subjects.length} Subjek</span>
+                    </div>
+                    <h3 class="text-base font-bold text-white">${c.title}</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mt-2">${c.description}</p>
+                  </div>
+                  <div class="pt-4 border-t border-cinematic-800 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">${c.shortTitle}</span>
+                    <button onclick="navigateTo('centre', { centreId: ${c.id} })" class="px-4 py-2 rounded-xl bg-cinematic-800 hover:bg-brand-500 hover:text-black text-white text-xs font-bold transition">
+                      Buka Modul →
+                    </button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    /* =========================================================
+       FUNGSI PAPARAN: HALAMAN PUSAT PEMBELAJARAN
+       ========================================================= */
+    function renderCentrePage(centreId) {
+      const centre = LEARNING_CENTRES.find(c => c.id === centreId) || LEARNING_CENTRES[0];
+
+      return `
+        <div class="space-y-8">
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <button onclick="navigateTo('home')" class="hover:underline">Laman Utama</button>
+            <span>/</span>
+            <span class="text-white font-bold">${centre.code}</span>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-3">
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 uppercase">${centre.code}</span>
+            <h1 class="text-2xl sm:text-4xl font-black text-white">${centre.title}</h1>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">${centre.description}</p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-xl font-black text-white">Senarai Subjek Pengkhususan (${centre.subjects.length} Subjek)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${centre.subjects.map(sub => `
+                <div class="bg-cinematic-900 rounded-3xl p-6 border border-cinematic-800 hover:border-amber-500/60 transition flex flex-col justify-between space-y-4">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-mono font-bold text-amber-400">${sub.code}</span>
+                      <span class="text-xs font-mono text-slate-400">${sub.chaptersCount} Bab Lengkap</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">${sub.title}</h3>
+                    <p class="text-xs text-slate-400 italic">${sub.enTitle}</p>
+                  </div>
+                  <div class="pt-4 border-t border-cinematic-800 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-semibold">✓ Sukatan Pelajaran Tersedia</span>
+                    <button onclick="navigateTo('subject', { subjectId: '${sub.id}' })" class="px-4 py-2 rounded-xl bg-brand-500 hover:bg-amber-400 text-black font-extrabold text-xs shadow-md transition">
+                      Masuk ke Subjek →
+                    </button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* =========================================================
+       FUNGSI PAPARAN: HALAMAN SUBJEK & SENARAI BAB LENGKAP
+       ========================================================= */
+    function renderSubjectPage(subId) {
+      let currentSub = null;
+      let parentCentre = null;
+
+      for (const c of LEARNING_CENTRES) {
+        const found = c.subjects.find(s => s.id === subId);
+        if (found) {
+          currentSub = found;
+          parentCentre = c;
+          break;
+        }
+      }
+
+      if (!currentSub) {
+        currentSub = LEARNING_CENTRES[0].subjects[1];
+        parentCentre = LEARNING_CENTRES[0];
+      }
+
+      const chapters = getChaptersForSubject(currentSub);
+      const completedCount = chapters.filter(ch => AppState.completedChapters.includes(ch.id)).length;
+      const progressPercent = Math.round((completedCount / chapters.length) * 100);
+
+      return `
+        <div class="space-y-8">
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <button onclick="navigateTo('home')" class="hover:underline">Laman Utama</button>
+            <span>/</span>
+            <button onclick="navigateTo('centre', { centreId: ${parentCentre.id} })" class="hover:underline">${parentCentre.code}</button>
+            <span>/</span>
+            <span class="text-white font-bold">${currentSub.code}</span>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-4">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 uppercase">${currentSub.code}</span>
+              <span class="text-xs text-slate-400 font-mono">${chapters.length} Bab Sukatan Pelajaran</span>
+            </div>
+            <div>
+              <h1 class="text-2xl sm:text-4xl font-black text-white">${currentSub.title}</h1>
+              <p class="text-xs sm:text-sm text-slate-400 italic mt-1">${currentSub.enTitle}</p>
+            </div>
+
+            <!-- Penjejak Kemajuan Bab -->
+            <div class="pt-4 border-t border-cinematic-800 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-300">
+                <span>Kemajuan Pembelajaran Anda:</span>
+                <span class="font-bold font-mono text-amber-400">${completedCount} / ${chapters.length} Bab Selesai (${progressPercent}%)</span>
+              </div>
+              <div class="w-full bg-cinematic-950 h-2.5 rounded-full overflow-hidden border border-cinematic-800">
+                <div class="bg-gradient-to-r from-amber-500 to-purple-600 h-full transition-all duration-500" style="width: ${progressPercent}%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Senarai Semua Bab Yang Boleh Dibuka -->
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-black text-white">Senarai Bab & Kandungan Nota</h2>
+              <span class="text-xs text-slate-400">Klik 'Baca Nota' pada mana-mana bab untuk membuka</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+              ${chapters.map(ch => {
+                const isCompleted = AppState.completedChapters.includes(ch.id);
+                return `
+                  <div class="bg-cinematic-900 rounded-2xl p-5 border ${isCompleted ? 'border-emerald-500/40' : 'border-cinematic-800'} hover:border-amber-500/60 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                      <div class="flex items-center gap-2">
+                        <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-cinematic-950 text-amber-400 border border-cinematic-800">Bab ${ch.number}</span>
+                        <span class="text-[11px] text-slate-400 font-mono">⏱️ ${ch.readTime}</span>
+                        ${isCompleted ? '<span class="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800">✓ Selesai Dibaca</span>' : ''}
+                      </div>
+                      <h3 class="text-base font-bold text-white hover:text-amber-400 cursor-pointer transition" onclick="navigateTo('reader', { subjectId: '${currentSub.id}', chapterId: '${ch.id}' })">
+                        ${ch.title}
+                      </h3>
+                    </div>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                      <button onclick="toggleChapterComplete('${ch.id}')" title="Tanda Selesai" class="p-2.5 rounded-xl bg-cinematic-800 hover:bg-cinematic-700 text-xs transition border border-cinematic-700 ${isCompleted ? 'text-emerald-400' : 'text-slate-400'}">
+                        ${isCompleted ? '✓ Selesai' : 'Tanda Selesai'}
+                      </button>
+                      <button onclick="navigateTo('reader', { subjectId: '${currentSub.id}', chapterId: '${ch.id}' })" class="px-4 py-2.5 rounded-xl bg-brand-500 hover:bg-amber-400 text-black font-extrabold text-xs shadow-md transition">
+                        Baca Nota →
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* =========================================================
+       FUNGSI PAPARAN: MOD PEMBACA EDITORIAL (READER VIEW)
+       ========================================================= */
+    function renderReaderPage(subId, chId) {
+      let currentSub = null;
+      let parentCentre = null;
+
+      for (const c of LEARNING_CENTRES) {
+        const found = c.subjects.find(s => s.id === subId);
+        if (found) {
+          currentSub = found;
+          parentCentre = c;
+          break;
+        }
+      }
+
+      if (!currentSub) {
+        currentSub = LEARNING_CENTRES[0].subjects[1];
+        parentCentre = LEARNING_CENTRES[0];
+      }
+
+      const chapters = getChaptersForSubject(currentSub);
+      const chapter = chapters.find(c => c.id === chId) || chapters[0];
+      const isCompleted = AppState.completedChapters.includes(chapter.id);
+
+      return `
+        <div class="max-w-4xl mx-auto space-y-8">
+          
+          <!-- Navigasi Belakang -->
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <button onclick="navigateTo('subject', { subjectId: '${currentSub.id}' })" class="hover:text-amber-400 flex items-center gap-1 font-bold">
+              ← Kembali ke Senarai Bab (${currentSub.code})
+            </button>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleChapterComplete('${chapter.id}')" class="px-3 py-1.5 rounded-xl border border-cinematic-700 text-xs font-bold transition ${isCompleted ? 'bg-emerald-950 text-emerald-300 border-emerald-600' : 'bg-cinematic-900 text-slate-300 hover:text-white'}">
+                ${isCompleted ? '✓ Selesai Dibaca' : 'Tanda Bab Sebagai Selesai'}
+              </button>
+            </div>
+          </div>
+
+          <!-- Kad Pengepala Bab -->
+          <article class="bg-cinematic-900 rounded-3xl p-6 sm:p-10 border border-cinematic-800 shadow-2xl space-y-6">
+            <header class="border-b border-cinematic-800 pb-6 space-y-2">
+              <div class="flex items-center justify-between text-xs text-amber-400 font-mono">
+                <span>${currentSub.code}: ${currentSub.title}</span>
+                <span>⏱️ Anggaran Bacaan: ${chapter.readTime}</span>
+              </div>
+              <h1 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+                ${chapter.title}
+              </h1>
+            </header>
+
+            <!-- Teks Kandungan Akademik Penuh -->
+            <div class="font-serif prose-editorial text-slate-200 text-base leading-relaxed">
+              ${chapter.content}
+            </div>
+
+            <!-- Kuiz Ulang Kaji Selepas Bab -->
+            <div class="mt-8 pt-8 border-t border-cinematic-800 space-y-4">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span>
+                <span>Soalan Refleksi & Ulang Kaji Bab</span>
+              </h3>
+              <p class="text-xs text-slate-400">Uji pemahaman anda sebelum beralih ke bab yang seterusnya:</p>
+              
+              <div class="p-5 rounded-2xl bg-cinematic-950 border border-cinematic-800 space-y-3 text-xs">
+                <p class="font-bold text-white">Soalan: Apakah impak utama sekiranya jurufoto memilih nilai aperture yang sangat luas (seperti f/1.4)?</p>
+                <div class="space-y-2">
+                  <button onclick="this.classList.add('bg-emerald-950','border-emerald-500','text-emerald-300')" class="w-full text-left p-3 rounded-xl bg-cinematic-900 hover:bg-cinematic-800 border border-cinematic-700 transition">
+                    A. Kedalaman medan menjadi cetek (bokeh latar belakang kabur) dan membenarkan lebih banyak cahaya masuk. (Jawapan Tepat)
+                  </button>
+                  <button onclick="this.classList.add('bg-rose-950','border-rose-500','text-rose-300')" class="w-full text-left p-3 rounded-xl bg-cinematic-900 hover:bg-cinematic-800 border border-cinematic-700 transition">
+                    B. Keseluruhan gambar dari depan ke belakang menjadi tajam dan gelap.
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigasi Bawah Bab -->
+            <footer class="pt-6 border-t border-cinematic-800 flex items-center justify-between flex-wrap gap-4 text-xs font-bold">
+              <button onclick="navigateTo('subject', { subjectId: '${currentSub.id}' })" class="px-4 py-2.5 rounded-xl bg-cinematic-800 hover:bg-cinematic-700 text-white transition">
+                ← Senarai Bab Subjek
+              </button>
+              <button onclick="toggleChapterComplete('${chapter.id}'); navigateTo('subject', { subjectId: '${currentSub.id}' });" class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-amber-400 text-black shadow-lg transition">
+                Tanda Selesai & Teruskan →
+              </button>
+            </footer>
+          </article>
+
+        </div>
+      `;
+    }
 
     /* =========================================================
        FUNGSI PAPARAN: PROFIL PEMBANGUN & GALERI KARYA
@@ -396,7 +904,6 @@
                   Berpengalaman luas dalam penulisan skrip, arahan visual, sinematografi, suntingan lanjutan (Premiere Pro, DaVinci Resolve, After Effects), pengurusan live-streaming PCR, serta penerbitan video korporat kerajaan berimpak tinggi.
                 </p>
 
-                <!-- Pautan Hubungan Terus -->
                 <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs">
                   <a href="mailto:akiff236@gmail.com" class="px-4 py-2 rounded-xl bg-cinematic-800 hover:bg-cinematic-700 text-white font-mono flex items-center gap-2 border border-cinematic-700 transition">
                     <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -416,9 +923,8 @@
             </div>
           </div>
 
-          <!-- ================= SEKSYEN GALERI KARYA VIDEO LENGKAP ================= -->
+          <!-- SEKSYEN GALERI KARYA VIDEO LENGKAP -->
           <div class="space-y-6">
-            
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-cinematic-800">
               <div>
                 <div class="flex items-center gap-2">
@@ -455,20 +961,17 @@
                 <div class="bg-cinematic-900 rounded-3xl border border-cinematic-800 overflow-hidden shadow-xl hover:border-amber-500/60 transition flex flex-col justify-between group">
                   
                   <div>
-                    <!-- Video Thumbnail dengan Butang Main -->
                     <div class="relative aspect-video bg-black overflow-hidden cursor-pointer" onclick="playVideoModal('${art.youtubeId}', '${art.title}')">
                       <img src="https://img.youtube.com/vi/${art.youtubeId}/hqdefault.jpg" 
                            alt="${art.title}" 
                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100">
                       
-                      <!-- Overlay Gradien & Butang Main -->
                       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
                         <div class="w-14 h-14 rounded-full bg-brand-500 text-black flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-amber-400 transition">
                           <svg class="w-7 h-7 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                       </div>
 
-                      <!-- Lencana Atas -->
                       <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
                         <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border backdrop-blur-md ${art.badgeColor}">
                           ${art.category}
@@ -478,7 +981,6 @@
                         </span>
                       </div>
 
-                      <!-- Statistik Video Bawah -->
                       <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px] text-slate-300 font-mono">
                         <span class="flex items-center gap-1.5">
                           <span class="w-2 h-2 rounded-full bg-red-500"></span>
@@ -488,26 +990,20 @@
                       </div>
                     </div>
 
-                    <!-- Butiran Lengkap Video -->
                     <div class="p-5 sm:p-6 space-y-3">
-                      
-                      <!-- TAJUK VIDEO BESAR, TEBAL & JELAS -->
                       <h3 class="text-lg font-black text-white group-hover:text-amber-400 transition leading-snug">
                         ${art.title}
                       </h3>
                       
-                      <!-- Peranan Pembangun -->
                       <div class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
                         <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                         <span>${art.role}</span>
                       </div>
 
-                      <!-- Sinopsis Penuh -->
                       <p class="text-xs text-slate-300 leading-relaxed">
                         ${art.synopsis}
                       </p>
 
-                      <!-- Tag Topik -->
                       <div class="flex flex-wrap gap-1.5 pt-1">
                         ${art.tags.map(tag => `
                           <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-cinematic-950 text-slate-400 border border-cinematic-800">
@@ -515,11 +1011,9 @@
                           </span>
                         `).join('')}
                       </div>
-
                     </div>
                   </div>
 
-                  <!-- Butang Tindakan Video Bawah -->
                   <div class="p-5 pt-0 flex items-center gap-2">
                     <button onclick="playVideoModal('${art.youtubeId}', '${art.title}')" class="flex-1 py-2.5 px-4 rounded-xl bg-brand-500 hover:bg-amber-400 text-black font-extrabold text-xs shadow-md transition flex items-center justify-center gap-2">
                       <svg class="w-4 h-4 fill-black" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -533,126 +1027,7 @@
                 </div>
               `).join('')}
             </div>
-
           </div>
-
-          <!-- ================= SEKSYEN PENGALAMAN & KELAYAKAN ================= -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <div class="p-6 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-4">
-              <h3 class="text-base font-bold text-white flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span>
-                <span>Pengalaman Lapangan & Kerjaya</span>
-              </h3>
-              
-              <div class="space-y-4 text-xs text-slate-300">
-                <div class="border-l-2 border-brand-500 pl-3 space-y-1">
-                  <span class="font-mono text-amber-400 font-bold">Sep 2023 — Sekarang</span>
-                  <h4 class="font-bold text-white text-sm">Pereka B5</h4>
-                  <p class="text-slate-400">Unit Komunikasi Korporat dan Inovasi, Pejabat Setiausaha Kerajaan Negeri Pulau Pinang</p>
-                  <p class="pt-1">Memimpin pasukan media, juruvideo & jurufoto utama majlis Kerajaan Negeri, penerbitan video korporat, montaj pelancaran, dan grafik inovasi.</p>
-                </div>
-
-                <div class="border-l-2 border-slate-700 pl-3 space-y-1">
-                  <span class="font-mono text-slate-400 font-bold">Jan 2023 — Sep 2023</span>
-                  <h4 class="font-bold text-white text-sm">MyStep IT</h4>
-                  <p class="text-slate-400">Unit Teknologi Maklumat, Pusat Latihan AADK Sungai Petani</p>
-                  <p class="pt-1">Pengendalian sokongan teknikal komputer dan rangkaian, juruvideo dan penyunting bahan media pendidikan AADK.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-6 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-4">
-              <h3 class="text-base font-bold text-white flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
-                <span>Pengiktirafan Profesional & Perisian</span>
-              </h3>
-
-              <div class="space-y-3 text-xs text-slate-300">
-                <div class="p-3 rounded-2xl bg-cinematic-950 border border-cinematic-800 space-y-1 font-mono">
-                  <div class="text-amber-400 font-bold">Lembaga Teknologis Malaysia (MBOT)</div>
-                  <div>No. Perakuan: <strong>QT25100169</strong></div>
-                  <div>Bidang: <strong>Art Design & Creative Multimedia Technology (AM)</strong></div>
-                  <div>Status: <strong>Juruteknik Berkelayakan (Qualified Technician)</strong></div>
-                </div>
-
-                <div>
-                  <h4 class="font-bold text-white mb-2">Perisian & Kemahiran Produksi:</h4>
-                  <div class="flex flex-wrap gap-1.5 font-medium">
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">Adobe Premiere Pro</span>
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">DaVinci Resolve (Coloring)</span>
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">Adobe After Effects</span>
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">Wondershare Filmora</span>
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">Live-Streaming PCR & OBS</span>
-                    <span class="px-2.5 py-1 rounded bg-cinematic-800 text-slate-200 border border-cinematic-700">Sinematografi & Lighting</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      `;
-    }
-
-    /* =========================================================
-       FUNGSI PAPARAN: LAMAN UTAMA (HOME)
-       ========================================================= */
-    function renderHomePage() {
-      return `
-        <div class="space-y-10">
-          
-          <!-- Sepanduk Wira Utama -->
-          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cinematic-900 via-cinematic-850 to-indigo-950/60 border border-cinematic-800 p-8 sm:p-12 shadow-2xl">
-            <div class="relative z-10 max-w-3xl space-y-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30 uppercase tracking-wider">
-                Perpustakaan Digital Ilmu Kreatif
-              </span>
-              <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-                Pusat Ilmu Fotografi, Video, Filem & Media Kreatif
-              </h1>
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Pelajari seni pembikinan filem, kawalan pencahayaan sinematik, teori visual, teknologi audiovisual, sehingga modul eksekutif komunikasi strategik dan perancangan media secara mendalam dalam Bahasa Melayu.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-2">
-                <button onclick="navigateTo('developer_profile')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600 hover:opacity-90 text-white font-extrabold text-xs shadow-lg transition flex items-center gap-2">
-                  <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span>Galeri Karya & Profil Pembangun (5 Video)</span>
-                </button>
-                <button onclick="navigateTo('comm_hub')" class="px-4 py-2.5 rounded-xl bg-cinematic-800 hover:bg-cinematic-700 text-amber-400 font-bold text-xs border border-cinematic-700 transition">
-                  Hab Komunikasi 3 Lapisan →
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6 Pusat Pembelajaran Grid -->
-          <div class="space-y-6">
-            <div>
-              <h2 class="text-2xl font-black text-white">6 Pusat Pembelajaran</h2>
-              <p class="text-xs text-slate-400">Pilih gugusan bidang pengkhususan untuk meneroka kurikulum berkaitan.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              ${LEARNING_CENTRES.map(c => `
-                <div class="bg-cinematic-900 rounded-3xl p-6 border border-cinematic-800 hover:border-amber-500/50 transition flex flex-col justify-between space-y-4">
-                  <div>
-                    <div class="flex items-center justify-between mb-2">
-                      <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-cinematic-800 text-amber-400 border border-cinematic-700">${c.code}</span>
-                      <span class="text-xs text-slate-400 font-mono">${c.subjects} Subjek</span>
-                    </div>
-                    <h3 class="text-base font-bold text-white">${c.title}</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed mt-2">${c.description}</p>
-                  </div>
-                  <button onclick="navigateTo('comm_hub')" class="w-full py-2 rounded-xl bg-cinematic-800 hover:bg-brand-500 hover:text-black text-white text-xs font-bold transition">
-                    Buka Modul →
-                  </button>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-
         </div>
       `;
     }
@@ -682,12 +1057,14 @@
               <span class="text-xs font-bold text-blue-400">LAPISAN 2</span>
               <h3 class="text-lg font-bold text-white">Professional Communication</h3>
               <p class="text-xs text-slate-400 leading-relaxed">Strategi Korporat, Perhubungan Awam (PR), Pengurusan Krisis, Model PESO, serta repositori 23 Templat Eksekutif Sedia Guna.</p>
+              <button onclick="navigateTo('templates_vault')" class="text-xs font-bold text-blue-400 hover:underline">Buka 23 Templat Eksekutif →</button>
             </div>
 
             <div class="p-6 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-3">
               <span class="text-xs font-bold text-purple-400">LAPISAN 3</span>
               <h3 class="text-lg font-bold text-white">Media & Audiovisual</h3>
               <p class="text-xs text-slate-400 leading-relaxed">Bahasa sinema, Penceritaan Fotografi, Eksperimen Montaj Kuleshov, Reka Bentuk Bunyi Emosional & Etika AI.</p>
+              <button onclick="navigateTo('visual_lab')" class="text-xs font-bold text-purple-400 hover:underline">Buka Makmal Visual Interaktif →</button>
             </div>
           </div>
         </div>
@@ -695,7 +1072,7 @@
     }
 
     /* =========================================================
-       FUNGSI PAPARAN: MAKMAL VISUAL
+       FUNGSI PAPARAN: MAKMAL VISUAL (KULESHOV EFFECT)
        ========================================================= */
     function renderVisualLabPage() {
       return `
@@ -758,18 +1135,71 @@
     }
 
     /* =========================================================
-       FUNGSI CARIAN & ENJIN UTAMA
+       FUNGSI PAPARAN: REPOSITORI 23 TEMPLAT KOMUNIKASI
+       ========================================================= */
+    function renderTemplatesVaultPage() {
+      const TEMPLATES = [
+        { id: 1, name: "Pelan Komunikasi Strategik (Strategic Comm Plan)", desc: "Struktur penuh matlamat, analisis audiens, mesej teras, taktik dan KPI organisasi." },
+        { id: 2, name: "Matriks Analisis Pihak Berkepentingan (Stakeholder Matrix)", desc: "Pemetaan kuasa vs minat (Mendelow's Power-Interest Matrix)." },
+        { id: 3, name: "Kenyataan Segera Krisis (Holding Statement 60 Minit)", desc: "Draf maklum balas awal 'Golden Hour' krisis komunikasi sebelum siasatan selesai." },
+        { id: 4, name: "Seni Bina Mesej Teras (Message House)", desc: "Payung mesej utama (Roof), 3 tiang sokongan (Pillars), dan bukti fakta (Proof Points)." },
+        { id: 5, name: "Templat Siaran Media Piawai (Press Release)", desc: "Format piramid terbalik (5W1H), petikan jurucakap, dan latar belakang organisasi." },
+        { id: 6, name: "Matriks Eskalasi Krisis (Crisis Escalation Matrix)", desc: "Protokol penarafan krisis (Tahap Hijau, Kuning, Merah) dan garis kuasa tindakan." }
+      ];
+
+      return `
+        <div class="space-y-8">
+          <div class="p-8 rounded-3xl bg-cinematic-900 border border-cinematic-800 space-y-3">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Pusat 6: Eksekutif</span>
+            <h1 class="text-2xl sm:text-4xl font-black text-white">Repositori 23 Templat Komunikasi Sedia Guna</h1>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+              Gunakan templat rasmi ini bagi mempercepatkan penyediaan dokumen perhubungan awam, pengurusan krisis, perancangan media, dan produksi korporat.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            ${TEMPLATES.map(t => `
+              <div class="p-6 rounded-3xl bg-cinematic-900 border border-cinematic-800 flex flex-col justify-between space-y-4">
+                <div>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-cinematic-950 text-emerald-400 border border-cinematic-800">Templat #${t.id}</span>
+                  <h3 class="text-base font-bold text-white mt-2">${t.name}</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">${t.desc}</p>
+                </div>
+                <button onclick="navigator.clipboard ? navigator.clipboard.writeText('${t.name}') : null; this.textContent='✓ Disalin ke Papan Klip!';" class="w-full py-2 rounded-xl bg-cinematic-800 hover:bg-emerald-500 hover:text-black text-white text-xs font-bold transition">
+                  Salin Templat Dokumen
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    /* =========================================================
+       FUNGSI CARIAN GLOBAL
        ========================================================= */
     function handleGlobalSearch(val) {
       if (!val || val.trim().length === 0) return;
       const q = val.toLowerCase().trim();
-      const match = DEVELOPER_ARTWORKS.find(art => art.title.toLowerCase().includes(q) || art.tags.some(t => t.toLowerCase().includes(q)));
-      if (match) {
+
+      for (const c of LEARNING_CENTRES) {
+        for (const s of c.subjects) {
+          if (s.title.toLowerCase().includes(q) || s.code.toLowerCase().includes(q)) {
+            navigateTo('subject', { subjectId: s.id });
+            return;
+          }
+        }
+      }
+
+      const matchArt = DEVELOPER_ARTWORKS.find(art => art.title.toLowerCase().includes(q) || art.tags.some(t => t.toLowerCase().includes(q)));
+      if (matchArt) {
         navigateTo('developer_profile');
       }
     }
 
-    /* ENJIN PEMAPARAN UTAMA */
+    /* =========================================================
+       ENJIN PEMAPARAN UTAMA (ROUTER DISPATCHER)
+       ========================================================= */
     function renderApp() {
       const container = document.getElementById('appContent');
       if (!container) return;
@@ -777,6 +1207,15 @@
       switch(AppState.currentView) {
         case 'home':
           container.innerHTML = renderHomePage();
+          break;
+        case 'centre':
+          container.innerHTML = renderCentrePage(AppState.selectedCentreId);
+          break;
+        case 'subject':
+          container.innerHTML = renderSubjectPage(AppState.selectedSubjectId);
+          break;
+        case 'reader':
+          container.innerHTML = renderReaderPage(AppState.selectedSubjectId, AppState.selectedChapterId);
           break;
         case 'developer_profile':
           container.innerHTML = renderDeveloperProfilePage();
@@ -787,8 +1226,11 @@
         case 'visual_lab':
           container.innerHTML = renderVisualLabPage();
           break;
+        case 'templates_vault':
+          container.innerHTML = renderTemplatesVaultPage();
+          break;
         default:
-          container.innerHTML = renderDeveloperProfilePage();
+          container.innerHTML = renderHomePage();
       }
     }
 
